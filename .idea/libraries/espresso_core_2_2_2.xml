@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="espresso-core-2.2.2">
+    <CLASSES>
+      <root url="jar://D:/IDEs/.android/build-cache/3a2134433168fb2e1408d18387fb89b6490a7a5d/output/jars/classes.jar!/" />
+      <root url="file://D:/IDEs/.android/build-cache/3a2134433168fb2e1408d18387fb89b6490a7a5d/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/IDEs/sdk/extras/android/m2repository/com/android/support/test/espresso/espresso-core/2.2.2/espresso-core-2.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

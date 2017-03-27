@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cpucontent"
+    tools:context="vendetta.androidbenchmark.CPUBenchActivity">
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Start Benchmark!"
+        android:id="@+id/cpubenchstart"
+        android:onClick="startBenchmark"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CPUBENCH is working!"
+        android:id="@+id/cpubenchresult"
+        android:layout_above="@id/cpubenchstart"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:lines="5"
+        />
+
+
+</RelativeLayout>

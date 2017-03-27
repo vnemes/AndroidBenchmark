@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_cpubench"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="CPU Benchmark" />
+        <item
+            android:id="@+id/nav_mopsbench"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="MOPS Benchmark" />
+        <item
+            android:id="@+id/nav_filebench"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="File Access Benchmark" />
+        <item
+            android:id="@+id/nav_pibench"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Digits Of Pi Benchmark" />
+    </group>
+
+    <item android:title="Online">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_leaderboard"
+                android:icon="@drawable/ic_menu_send"
+                android:title="View Leaderboards" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_perm_device_information_white_48dp.png",
+        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable-xxhdpi\\ic_perm_device_information_white_48dp.png"
+    },
+    {
+        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_perm_device_information_white_24dp.png",
+        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable-xxhdpi\\ic_perm_device_information_white_24dp.png"
+    }
+]

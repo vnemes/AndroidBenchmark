@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher_round.png",
+        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    }
+]
