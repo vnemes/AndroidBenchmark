@@ -1,58 +1,58 @@
 [
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_popup_exit.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\7e0e1ded1af81b7549e9d5433cf05d805702cc73\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\e9634edbc6daeaddc28367c69ff429e4fc76739d\\output\\res\\anim\\design_fab_in.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_fade_in.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\e9634edbc6daeaddc28367c69ff429e4fc76739d\\output\\res\\anim\\design_snackbar_out.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_fade_out.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\7e0e1ded1af81b7549e9d5433cf05d805702cc73\\output\\res\\anim\\design_fab_out.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_popup_enter.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\7e0e1ded1af81b7549e9d5433cf05d805702cc73\\output\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\e9634edbc6daeaddc28367c69ff429e4fc76739d\\output\\res\\anim\\design_snackbar_in.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\7e0e1ded1af81b7549e9d5433cf05d805702cc73\\output\\res\\anim\\design_fab_in.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\e9634edbc6daeaddc28367c69ff429e4fc76739d\\output\\res\\anim\\design_fab_out.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\anim\\abc_slide_in_bottom.xml"
     }
 ]

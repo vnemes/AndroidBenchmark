@@ -1,7 +1,7 @@
-#Wed Mar 22 20:35:40 EET 2017
-base.0=D\:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d142c1d3c17da1a6eb78230ad3d63ec6d9acb853
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=D\:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8981771c22ca3ab3fc4cd1188355290ff81b6248\\classes.dex
-base.1=D\:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8981771c22ca3ab3fc4cd1188355290ff81b6248
-file.0=D\:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d142c1d3c17da1a6eb78230ad3d63ec6d9acb853\\classes.dex
+#Sun Apr 30 19:15:08 EEST 2017
+base.0=C\:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_a0104b9524de0160d152dd2ea824dbc467f92694
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fa0e5557a15f385dc9f9b9f844b336716b44420b\\classes.dex
+base.1=C\:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fa0e5557a15f385dc9f9b9f844b336716b44420b
+file.0=C\:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_a0104b9524de0160d152dd2ea824dbc467f92694\\classes.dex

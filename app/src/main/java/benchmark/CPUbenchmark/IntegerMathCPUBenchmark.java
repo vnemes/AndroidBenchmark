@@ -14,17 +14,17 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
     private boolean shouldTestRun;
 
     @Override
-    public void initialize(){
-
-    }
+    public void initialize(){}
 
     @Override
     public void initialize(Long size) {
         this.poolSize = size;
         this.initialize();
     }
+
     @Override
-    public void warmup(){Long prevSize = this.poolSize;
+    public void warmup(){
+        Long prevSize = this.poolSize;
         this.poolSize = 10000L;
         for (int i=0; i<50; i++){
             run();
@@ -32,19 +32,23 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
         this.poolSize = prevSize;
     }
 
-
     @Override
     public void run(Object... param) {
         this.run();
     }
 
+    /**
+     * Does a lot of fixed point operations.
+     */
     @Override
     public void run() {
         this.shouldTestRun = true;
-        Long result = 1L;
-        for (Long i=0L; i< this.poolSize && shouldTestRun; i++){
-            result += i/256L;
-            }
+        long result = 1L;
+        for (long i = 0L; i < this.poolSize && shouldTestRun; i++) {
+            result += i / 256L;
+            result *= i % 3L + 1L;
+            result /= i % 2L + 1L;
+        }
     }
 
     @Override
@@ -53,7 +57,5 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
     }
 
     @Override
-    public void clean() {
-
-    }
+    public void clean() {}
 }

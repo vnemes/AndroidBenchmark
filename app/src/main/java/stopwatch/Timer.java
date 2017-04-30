@@ -12,7 +12,6 @@ public class Timer implements ITimer {
 	public void start() {
         this.duration = 0;
 		this.startTime = System.nanoTime();
-
 	}
 
 	@Override
@@ -24,7 +23,6 @@ public class Timer implements ITimer {
 	@Override
 	public void resume() {
 		this.startTime = System.nanoTime();
-
 	}
 
 	@Override
@@ -32,5 +30,4 @@ public class Timer implements ITimer {
         duration += System.nanoTime()-this.startTime;
         return duration;
 	}
-
 }

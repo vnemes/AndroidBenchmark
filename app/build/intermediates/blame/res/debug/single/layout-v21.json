@@ -1,18 +1,18 @@
 [
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\layout-v21\\notification_action.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\layout-v21\\notification_action.xml"
     }
 ]
