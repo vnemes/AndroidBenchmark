@@ -27,7 +27,6 @@ public class ConsoleLogger implements ILogger {
 	 */
 	@Override
 	public void write(long l) {
-
         Log.d("BenchmarkResult:",String.valueOf(l));
 	}
 
