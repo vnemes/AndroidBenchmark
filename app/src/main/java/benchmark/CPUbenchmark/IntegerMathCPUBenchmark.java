@@ -1,8 +1,5 @@
 package benchmark.CPUbenchmark;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import benchmark.IBenchmark;
 
 /**

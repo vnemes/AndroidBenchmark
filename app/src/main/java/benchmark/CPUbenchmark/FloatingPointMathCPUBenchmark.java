@@ -41,9 +41,9 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
         double sqrtE = 1.0;  // sqrt of Euler's number
         double temp;
         for (double i=0.0; i< this.poolSize && shouldTestRun; i++){
-            temp = sqrtPi + 3.14159265359 / sqrtPi;
+            temp = sqrtPi + Math.PI / sqrtPi;
             sqrtPi = temp * 0.5;
-            temp = sqrtE + 2.71828182845 / sqrtE;
+            temp = sqrtE + Math.E / sqrtE;
             sqrtE = temp * 0.5;
         }
     }
