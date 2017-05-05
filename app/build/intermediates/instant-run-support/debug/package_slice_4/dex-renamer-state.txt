@@ -1,4 +1,0 @@
-#Wed Mar 22 20:33:10 EET 2017
-base.0=D\:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4
-renamed.0=classes.dex
-file.0=D\:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4\\classes.dex
