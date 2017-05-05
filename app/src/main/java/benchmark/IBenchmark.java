@@ -3,7 +3,6 @@ package benchmark;
 /**
  * Created by Vendetta on 07-Mar-17.
  */
-
 public interface IBenchmark {
 
     public void initialize();
