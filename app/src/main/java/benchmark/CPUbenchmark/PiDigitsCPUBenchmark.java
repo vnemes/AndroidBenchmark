@@ -24,12 +24,14 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     private static final int THREAD_POOL_SIZE = 4;     // Number of threads.
     private static final int TOTAL_ITERATIONS = 10000; // More iterations results in better accuracy.
 
-    private final AtomicBoolean shouldRun = new AtomicBoolean();
+    private boolean shouldTestRun;
     private BigDecimal piResult = new BigDecimal(0);
-    private int scale = 10;
+    private int scale = 1000; // The scale should usually be equal to TOTAL_ITERATIONS
 
     @Override
-    public void initialize() {}
+    public void initialize() {
+        throw new UnsupportedOperationException();
+    }
 
     /**
      * @param size How many digits to compute.
@@ -37,24 +39,23 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     @Override
     public void initialize(Long size) {
         this.scale = size.intValue();
-        this.initialize();
     }
 
     public void warmup(){
         int prevScale = this.scale;
-        this.scale = 10;
+        this.scale = 100;
         this.run();
         this.scale = prevScale;
     }
 
     @Override
     public void run(Object... param) {
-        this.run();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void run() {
-        shouldRun.set(true);
+        this.shouldTestRun = true;
         MathContext context = new MathContext(this.scale);
         final ExecutorService threadPool = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
         final int chunkSize = TOTAL_ITERATIONS / THREAD_POOL_SIZE;
@@ -64,36 +65,38 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
             chunksResult.add(threadPool.submit(new ComputeChunk(chunkStart, Math.min(chunkStart + chunkSize, TOTAL_ITERATIONS), context)));
         }
         for (Future<BigDecimal> result : chunksResult) {
-            if (!this.shouldRun.get()) {
+            if (!this.shouldTestRun) {
                 break;
             }
             try {
                 piResult = piResult.add(result.get(), context);
             } catch (Exception e) {
-                if (shouldRun.get()) {
+                if (shouldTestRun) {
                     // Something went wrong
                     //TODO What do we do now ?
                     Log.d(PiDigitsCPUBenchmark.class.getName(), e.getMessage());
                 }
             }
         }
-        this.shouldRun.set(false);
+        this.shouldTestRun = false;
     }
 
     @Override
     public void stop() {
-        this.shouldRun.set(false);
+        this.shouldTestRun = false;
+    }
+
+    @Override
+    public void clean() {
+        throw new UnsupportedOperationException();
     }
 
     public BigDecimal getPi(){
         return this.piResult;
     }
 
-    @Override
-    public void clean() {}
-
     /**
-     * .
+     * Does part of the PI computation.
      */
     private class ComputeChunk implements Callable<BigDecimal> {
         private int begin;
@@ -118,7 +121,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
             terms[2] = new BigDecimal(1);
             terms[3] = new BigDecimal(1);
 
-            for (int i = begin; i < end && shouldRun.get(); i++) {
+            for (int i = begin; i < end && shouldTestRun; i++) {
                 sum = terms[0].divide(BigDecimal.valueOf(8 * i + 1), context);
                 sum = sum.subtract(terms[1].divide(BigDecimal.valueOf(8 * i + 4), context), context);
                 sum = sum.subtract(terms[2].divide(BigDecimal.valueOf(8 * i + 5), context), context);

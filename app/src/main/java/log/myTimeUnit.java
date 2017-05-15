@@ -12,11 +12,11 @@ public enum myTimeUnit {
      * @param unit Time unit to which nanoseconds are converted.
      * @return The converted value.
      */
-    public static double convertTime(long ns, myTimeUnit unit) {
+    public static long convertTime(long ns, myTimeUnit unit) {
         switch (unit) {
-            case MicroSecond: return ns / 1000.0;
-            case MiliSecond:  return ns / 1000000.0;
-            case Second:      return ns / 1000000000.0;
+            case MicroSecond: return ns / 1000;
+            case MiliSecond:  return ns / 1000000;
+            case Second:      return ns / 1000000000;
             default:          return ns;
         }
 	}
