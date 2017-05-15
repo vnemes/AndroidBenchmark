@@ -78,6 +78,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
                 }
             }
         }
+        threadPool.shutdownNow();
         this.shouldTestRun = false;
     }
 
@@ -87,9 +88,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     }
 
     @Override
-    public void clean() {
-        throw new UnsupportedOperationException();
-    }
+    public void clean() {}
 
     public BigDecimal getPi(){
         return this.piResult;

@@ -2,7 +2,7 @@ package log;
 
 public enum myTimeUnit {
     MicroSecond,
-    MiliSecond,
+    MilliSecond,
     Second;
 
     /**
@@ -15,7 +15,7 @@ public enum myTimeUnit {
     public static long convertTime(long ns, myTimeUnit unit) {
         switch (unit) {
             case MicroSecond: return ns / 1000;
-            case MiliSecond:  return ns / 1000000;
+            case MilliSecond:  return ns / 1000000;
             case Second:      return ns / 1000000000;
             default:          return ns;
         }

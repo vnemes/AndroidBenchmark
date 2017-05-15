@@ -57,7 +57,5 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
     }
 
     @Override
-    public void clean() {
-        throw new UnsupportedOperationException();
-    }
+    public void clean() {}
 }

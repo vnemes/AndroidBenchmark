@@ -60,7 +60,5 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
     }
 
     @Override
-    public void clean() {
-        throw new UnsupportedOperationException();
-    }
+    public void clean() {}
 }
