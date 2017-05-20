@@ -7,26 +7,28 @@ import benchmark.IBenchmark;
  */
 
 public class IntegerMathCPUBenchmark implements IBenchmark {
-    private Long poolSize = Long.MAX_VALUE;
+    private Long size = Long.MAX_VALUE;
     private boolean shouldTestRun;
 
     @Override
-    public void initialize(){}
+    public void initialize(){
+        throw new UnsupportedOperationException();
+    }
 
     @Override
     public void initialize(Long size) {
-        this.poolSize = size;
-        this.initialize();
+        this.size = size;
     }
 
     @Override
     public void warmup(){
-        Long prevSize = this.poolSize;
-        this.poolSize = 10000L;
-        for (int i=0; i<50; i++){
+        Long prevSize = this.size;
+        this.size = 1000L;
+        for (int i=1; i<=3; i*=10){
             run();
+            this.size *= 10;
         }
-        this.poolSize = prevSize;
+        this.size = prevSize;
     }
 
     @Override
@@ -41,11 +43,12 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
     public void run() {
         this.shouldTestRun = true;
         long result = 1L;
-        for (long i = 0L; i < this.poolSize && shouldTestRun; i++) {
+        for (long i = 0L; i < this.size && this.shouldTestRun; i++) {
             result += i / 256L;
             result *= i % 3L + 1L;
             result /= i % 2L + 1L;
         }
+        this.shouldTestRun = false;
     }
 
     @Override
