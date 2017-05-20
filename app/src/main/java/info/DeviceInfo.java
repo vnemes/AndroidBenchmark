@@ -7,26 +7,18 @@ import android.os.Build;
  */
 
 public class DeviceInfo {
-    private String manufacturer;
-    private String model;
+    private static String manufacturer = capitalize(Build.MANUFACTURER);
+    private static String model = Build.MODEL.startsWith(manufacturer) ? Build.MODEL.replace(manufacturer, "") : Build.MODEL;
 
-    public DeviceInfo(){
-        manufacturer = Build.MANUFACTURER;
-        model = Build.MODEL;
-        if (model.startsWith(manufacturer)) {
-            model.replace(manufacturer, "");
-        }
-        manufacturer = capitalize(manufacturer);
-    }
-    public String getManufacturer(){
-        return this.manufacturer;
+    public static String getManufacturer() {
+        return manufacturer;
     }
 
-    public String getModel(){
-        return this.model;
+    public static String getModel() {
+        return model;
     }
 
-    private String capitalize(String s) {
+    private static String capitalize(String s) {
         if (s == null || s.length() == 0) {
             return "";
         }

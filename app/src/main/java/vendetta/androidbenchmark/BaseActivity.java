@@ -33,7 +33,7 @@ public class BaseActivity extends AppCompatActivity
         super.setContentView(R.layout.nav_drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        DeviceInfo deviceInfo = new DeviceInfo();
+        //DeviceInfo deviceInfo = new DeviceInfo();
         view_stub = (FrameLayout) findViewById(R.id.view_stub);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -41,10 +41,10 @@ public class BaseActivity extends AppCompatActivity
         View header = navigationView.getHeaderView(0);
         TextView manufacturerTextView = (TextView) header.findViewById(R.id.manufacturertxtview);
         TextView modelTextView = (TextView) header.findViewById(R.id.modeltxtview);
-        Log.d("Manufacturer: ", deviceInfo.getManufacturer());
-        Log.d("Model: ",deviceInfo.getModel());
-        manufacturerTextView.setText("Manufacturer: " +deviceInfo.getManufacturer());
-        modelTextView.setText("Model: " +deviceInfo.getModel());
+        Log.d("Manufacturer: ", DeviceInfo.getManufacturer());
+        Log.d("Model: ",DeviceInfo.getModel());
+        manufacturerTextView.setText("Manufacturer: " +DeviceInfo.getManufacturer());
+        modelTextView.setText("Model: " +DeviceInfo.getModel());
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
