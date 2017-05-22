@@ -120,4 +120,10 @@ public class OPSCPUBenchmark implements IBenchmark {
     public void clean() {
 
     }
+
+
+    @Override
+    public String getInfo(){
+        return "";
+    }
 }

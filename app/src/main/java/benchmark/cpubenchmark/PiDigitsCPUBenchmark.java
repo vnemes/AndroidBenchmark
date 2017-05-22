@@ -130,4 +130,10 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
             return sigma;
         }
     }
+
+
+    @Override
+    public String getInfo(){
+        return "";
+    }
 }

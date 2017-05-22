@@ -110,4 +110,9 @@ public class DownloadSpeedNetworkBenchmark implements IBenchmark {
     public double getResult() {
         return this.result;
     }
+
+    @Override
+    public String getInfo(){
+        return "Network Speed Benchmark:\nMeasures download speed by downloading a large file from http://www.engineerhammad.com.";
+    }
 }

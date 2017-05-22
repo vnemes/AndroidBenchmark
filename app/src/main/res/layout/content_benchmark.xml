@@ -20,21 +20,28 @@
         android:text="Start Benchmark!"
         android:id="@+id/cpubenchstart"
         android:onClick="startBenchmark"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
+        android:layout_marginBottom="203dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CPUBENCH is working!"
         android:id="@+id/cpubenchresult"
-        android:layout_above="@id/cpubenchstart"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
         android:lines="5"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="126dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="63dp"
+        android:layout_above="@+id/cpubenchstart"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

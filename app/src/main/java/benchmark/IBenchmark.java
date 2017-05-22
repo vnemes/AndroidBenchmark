@@ -43,4 +43,11 @@ public interface IBenchmark {
      * Free resources.
      */
     public void clean();
+
+    /**
+     *
+     * @return Information regarding the benchmark
+     */
+    public String getInfo();
+
 }

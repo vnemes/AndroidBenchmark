@@ -36,7 +36,6 @@ public class BaseActivity extends AppCompatActivity
         super.setContentView(R.layout.nav_drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //DeviceInfo deviceInfo = new DeviceInfo();
         view_stub = (FrameLayout) findViewById(R.id.view_stub);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);

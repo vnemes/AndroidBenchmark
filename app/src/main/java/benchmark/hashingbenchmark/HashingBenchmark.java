@@ -22,11 +22,11 @@ import log.ConsoleLogger;
 public class HashingBenchmark implements IBenchmark {
     private static final int THREAD_POOL_SIZE = 4;
     private static final long RND_SEED = 25214903917L; // Used for shuffling.
-
+    private final ExecutorService threadPool = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
     private ConsoleLogger logger = new ConsoleLogger();
 
     private final List<Character> alphabet = new ArrayList<>();
-    private long size = 100L; // How many passwords to be hashed.
+    private long size = 10L; // How many passwords to be hashed.
     private boolean shouldTestRun;
 
     @Override
@@ -59,7 +59,6 @@ public class HashingBenchmark implements IBenchmark {
     public void run() {
         this.shouldTestRun = true;
         Random rnd = new Random(RND_SEED);
-        final ExecutorService threadPool = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
         final List<Future<String>> results = new ArrayList<>((int)this.size);
         for (int i = 0; i < this.size && this.shouldTestRun; ++i) {
             Collections.shuffle(alphabet, rnd);
@@ -84,6 +83,7 @@ public class HashingBenchmark implements IBenchmark {
     @Override
     public void stop() {
         this.shouldTestRun = false;
+        threadPool.shutdownNow();
     }
 
     @Override
@@ -100,5 +100,10 @@ public class HashingBenchmark implements IBenchmark {
         public String call() throws Exception {
             return BCrypt.hashpw(password, BCrypt.gensalt(13));
         }
+    }
+
+    public String getInfo(){
+        return
+        "\t\tHashing Benchmark:\nHashes passwords using the BCrypt algorithm.";
     }
 }

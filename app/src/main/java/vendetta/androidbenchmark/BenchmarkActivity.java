@@ -11,6 +11,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.lang.reflect.InvocationTargetException;
@@ -25,6 +26,7 @@ import stopwatch.Timer;
 public class BenchmarkActivity extends BaseActivity {
     private IBenchmark benchmark = null;
     private TextView result;
+    private ProgressBar progressBar;
 //    private IntegerMathCPUBenchmark intBench;
 //    private FloatingPointMathCPUBenchmark floatBench;
 //    private PiDigitsCPUBenchmark piBench;
@@ -35,8 +37,10 @@ public class BenchmarkActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_cpubench);
+        setContentView(R.layout.content_benchmark);
         result = (TextView) findViewById(R.id.cpubenchresult);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
+        progressBar.setVisibility(View.GONE);
 
         Intent intent = getIntent();
         String benchName = intent.getStringExtra(BENCH_NAME);
@@ -44,6 +48,7 @@ public class BenchmarkActivity extends BaseActivity {
             Log.d("Debug: ",benchName);
             benchmark = (IBenchmark) Class.forName("benchmark."+benchName.toLowerCase()+"."+benchName).getConstructor().newInstance();
             benchmark.initialize();
+            result.setText(benchmark.getInfo());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {
@@ -78,6 +83,8 @@ public class BenchmarkActivity extends BaseActivity {
     public void startBenchmark(View view) {
         final TextView result = (TextView) findViewById(R.id.cpubenchresult);
         final Timer timer = new Timer();
+        progressBar.setVisibility(View.VISIBLE);
+        result.append("\n\nRunning!");
 
         /*
         intBench.warmup();
@@ -122,6 +129,7 @@ public class BenchmarkActivity extends BaseActivity {
 
             protected void onPostExecute(Long time) {
                 result.append("Hashing: " + myTimeUnit.convertTime(time, myTimeUnit.MilliSecond));
+                progressBar.setVisibility(View.GONE);
             }
         }.execute();
     }

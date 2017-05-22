@@ -22,9 +22,9 @@ import vendetta.androidbenchmark.MainActivity;
 public class Database {
     public ProgressDialog mProgressDialog;
     private static final String TAG = "DB ";
-    private static String uid;
-    protected static FirebaseAuth mAuth;
-    private static FirebaseDatabase database;
+    private static String uid = null;
+    protected static FirebaseAuth mAuth = null;
+    private static FirebaseDatabase database = null;
     private static DatabaseReference databaseUserScoreRef;
     private static ValueEventListener databaseListener;
     private static FirebaseAuth.AuthStateListener mAuthListener;
@@ -54,8 +54,10 @@ public class Database {
                 // User is signed in
                 if (uid != null) {
                     Log.d(TAG, "User " + uid + " is logged in!");
-                    FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-                    database = FirebaseDatabase.getInstance();
+                    if (database == null) {
+                        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+                        database = FirebaseDatabase.getInstance();
+                    }
                     databaseUserScoreRef = database.getReference().child("users").child(uid);
                     databaseListener = databaseUserScoreRef.addValueEventListener(new ValueEventListener() {
                         @Override
