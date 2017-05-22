@@ -17,6 +17,7 @@ import android.widget.TextView;
 import java.lang.reflect.InvocationTargetException;
 
 import benchmark.IBenchmark;
+import database.Database;
 import database.Score;
 import log.myTimeUnit;
 import stopwatch.Timer;
@@ -28,10 +29,11 @@ public class BenchmarkActivity extends BaseActivity {
     private IBenchmark benchmark = null;
     private TextView result;
     private ProgressBar progressBar;
+    private String benchName;
 //    private IntegerMathCPUBenchmark intBench;
 //    private FloatingPointMathCPUBenchmark floatBench;
 //    private PiDigitsCPUBenchmark piBench;
-//    private DownloadSpeedNetworkBenchmark networkSpeedBench;
+//    private NetworkBenchmark networkSpeedBench;
 //    private HashingBenchmark hashingBench;
 //    private ConsoleLogger logger = new ConsoleLogger();
 
@@ -44,7 +46,7 @@ public class BenchmarkActivity extends BaseActivity {
         progressBar.setVisibility(View.GONE);
 
         Intent intent = getIntent();
-        String benchName = intent.getStringExtra(BENCH_NAME);
+        benchName = intent.getStringExtra(BENCH_NAME);
         try {
             Log.d("Debug: ",benchName);
             benchmark = (IBenchmark) Class.forName("benchmark."+benchName.toLowerCase()+"."+benchName).getConstructor().newInstance();
@@ -66,7 +68,7 @@ public class BenchmarkActivity extends BaseActivity {
 //        intBench = new IntegerMathCPUBenchmark();
 //        floatBench = new FloatingPointMathCPUBenchmark();
 //        piBench = new PiDigitsCPUBenchmark();
-//        networkSpeedBench = new DownloadSpeedNetworkBenchmark();
+//        networkSpeedBench = new NetworkBenchmark();
 //        hashingBench = new HashingBenchmark();
 //
 //        hashingBench.initialize(100L);
@@ -130,8 +132,15 @@ public class BenchmarkActivity extends BaseActivity {
 
             protected void onPostExecute(Score score) {
                 result.append("Hashing: " + score.getResult());
+            }
+/*
+            protected void onPostExecute(Long time) {
+                result.setText(Double.longBitsToDouble(time)+"  MB/s");
+                Database.postBenchScore(new Score(benchName, String.valueOf(Double.longBitsToDouble(time)),""));
+                Score s = Database.getBenchScore(benchName);
                 progressBar.setVisibility(View.GONE);
             }
+            */
         }.execute();
     }
 

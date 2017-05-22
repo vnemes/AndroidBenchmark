@@ -86,14 +86,17 @@ public class Database {
     }
 
     public static void postBenchScore(Score score){
-        database.getReference().child(score.getBenchName()).child(uid).setValue(score);
+        score.setUid(uid);
+        database.getReference().child("benchmarks").child(score.getBenchName()).child(uid).setValue(score);
+        Log.d("DB ","posted "+score.toString());
     }
 
     public static Score getBenchScore(String benchmarkName){
-        database.getReference().child(benchmarkName).child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+        database.getReference().child("benchmarks").child(benchmarkName).child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 benchScore = dataSnapshot.getValue(Score.class);
+                Log.d("DB ","got "+benchScore.toString());
             }
 
             @Override

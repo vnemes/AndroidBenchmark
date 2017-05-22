@@ -92,4 +92,8 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
                 this.extra
         );
     }
+
+    public Object getResult(){
+        return new Object();
+    }
 }

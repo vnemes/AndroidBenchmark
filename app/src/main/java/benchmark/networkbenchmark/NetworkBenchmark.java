@@ -1,5 +1,7 @@
 package benchmark.networkbenchmark;
 
+import android.util.Log;
+
 import java.io.DataInput;
 import java.io.DataInputStream;
 import java.io.EOFException;
@@ -21,7 +23,7 @@ import stopwatch.Timer;
 /**
  * Measures download speed by downloading a large file from http://www.engineerhammad.com.
  */
-public class DownloadSpeedNetworkBenchmark implements IBenchmark {
+public class NetworkBenchmark implements IBenchmark {
     private static final String FILE_ADDRESS = "ftp://speedtest:speedtest@ftp.otenet.gr/test1Gb.db";
     private static final int MAX_FILE_SIZE = 1024 * 1024 * 512;
     private static final int BUFFER_SIZE = 1024 * 1024 * 16; // Buffer size in bytes.
@@ -114,16 +116,17 @@ public class DownloadSpeedNetworkBenchmark implements IBenchmark {
         throw new UnsupportedOperationException();
     }
 
-    public double getResult() {
-        return this.result;
-    }
-
     @Override
     public Score getScore() {
         return new Score(
                 Benchmarks.NetworkBenchmark.toString(),
                 String.format(java.util.Locale.US,"%.3f", this.result),
                 this.extra);
+    }
+
+    public Object getResult() {
+        Log.d("Debug ", Double.toString(result));
+        return this.result;
     }
 
     @Override

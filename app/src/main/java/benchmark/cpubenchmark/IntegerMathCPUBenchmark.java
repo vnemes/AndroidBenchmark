@@ -1,7 +1,5 @@
 package benchmark.cpubenchmark;
 
-import android.nfc.NfcAdapter;
-
 import benchmark.Benchmarks;
 import benchmark.IBenchmark;
 import database.Score;
@@ -91,5 +89,9 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
                 this.extra
         );
+    }
+
+    public Object getResult(){
+        return new Object();
     }
 }

@@ -61,4 +61,6 @@ public interface IBenchmark {
      * Does the actual computation.
      */
     public void compute();
+
+    public Object getResult();
 }
