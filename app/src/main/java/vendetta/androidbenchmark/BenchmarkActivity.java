@@ -122,21 +122,25 @@ public class BenchmarkActivity extends BaseActivity {
             }
         }.execute();
         */
-        new AsyncTask<Void, Void, Long>() {
-            protected Long doInBackground(Void... params) {
+        new AsyncTask<Void, Void, Score>() {
+            protected Score doInBackground(Void... params) {
 //                logger.write("Benchmark is starting...");
-                timer.start();
                 benchmark.run();
-                timer.stop();
-                return Double.doubleToLongBits((double) benchmark.getResult());
+                benchmark.clean();
+                return benchmark.getScore();
             }
 
+            protected void onPostExecute(Score score) {
+                result.append("Hashing: " + score.getResult());
+            }
+/*
             protected void onPostExecute(Long time) {
                 result.setText(Double.longBitsToDouble(time)+"  MB/s");
                 Database.postBenchScore(new Score(benchName, String.valueOf(Double.longBitsToDouble(time)),""));
                 Score s = Database.getBenchScore(benchName);
                 progressBar.setVisibility(View.GONE);
             }
+            */
         }.execute();
     }
 

@@ -9,8 +9,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import benchmark.Benchmarks;
 import benchmark.IBenchmark;
+import database.Score;
 import log.ConsoleLogger;
+import log.myTimeUnit;
+import stopwatch.Timer;
 
 /**
  * Created by alex on 5/15/2017.
@@ -22,18 +26,21 @@ import log.ConsoleLogger;
 public class HashingBenchmark implements IBenchmark {
     private static final int THREAD_POOL_SIZE = 4;
     private static final long RND_SEED = 25214903917L; // Used for shuffling.
-    private final ExecutorService threadPool = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
     private ConsoleLogger logger = new ConsoleLogger();
 
+    private long result; // measured time
+    private String extra;
     private final List<Character> alphabet = new ArrayList<>();
-    private long size = 10L; // How many passwords to be hashed.
+    private long size = 25L; // How many passwords to be hashed.
     private boolean shouldTestRun;
 
     @Override
     public void initialize() {
+        alphabet.clear();
         for (int i = 0x20; i <= 0x7E; ++i) {
             alphabet.add((char) i);
         }
+        this.result = 0;
     }
 
     @Override
@@ -45,8 +52,8 @@ public class HashingBenchmark implements IBenchmark {
     @Override
     public void warmup() {
         Long prevSize = this.size;
-        initialize(10L);
-        run();
+        initialize(3L);
+        compute();
         this.size = prevSize;
     }
 
@@ -57,6 +64,16 @@ public class HashingBenchmark implements IBenchmark {
 
     @Override
     public void run() {
+        this.warmup();
+        final Timer timer = new Timer();
+        timer.start();
+        this.compute();
+        this.result = timer.stop();
+    }
+
+    @Override
+    public void compute() {
+        final ExecutorService threadPool = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
         this.shouldTestRun = true;
         Random rnd = new Random(RND_SEED);
         final List<Future<String>> results = new ArrayList<>((int)this.size);
@@ -76,18 +93,25 @@ public class HashingBenchmark implements IBenchmark {
                 logger.write("Exception: " + e.toString());
             }
         }
-        threadPool.shutdownNow();
         this.shouldTestRun = false;
+        threadPool.shutdownNow();
     }
 
     @Override
     public void stop() {
         this.shouldTestRun = false;
-        threadPool.shutdownNow();
     }
 
     @Override
     public void clean() {}
+
+    @Override
+    public Score getScore() {
+        return new Score(
+                Benchmarks.HashingBenchmark.toString(),
+                Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
+                this.extra);
+    }
 
     private class HashCalculator implements Callable<String> {
         private final String password;
@@ -98,7 +122,7 @@ public class HashingBenchmark implements IBenchmark {
 
         @Override
         public String call() throws Exception {
-            return BCrypt.hashpw(password, BCrypt.gensalt(13));
+            return BCrypt.hashpw(password, BCrypt.gensalt(8));
         }
     }
 

@@ -1,7 +1,13 @@
 package benchmark.cpubenchmark;
 
 import android.util.Log;
+
+import benchmark.Benchmarks;
 import benchmark.IBenchmark;
+import database.Score;
+import log.myTimeUnit;
+import stopwatch.Timer;
+
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.ArrayList;
@@ -24,12 +30,15 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     private static final int TOTAL_ITERATIONS = 10000; // More iterations results in better accuracy.
 
     private boolean shouldTestRun;
+    private String extra;
+    private long result;
     private BigDecimal piResult = new BigDecimal(0);
     private int scale = 1000; // The scale should usually be equal to TOTAL_ITERATIONS
 
     @Override
     public void initialize() {
-        throw new UnsupportedOperationException();
+        this.scale = 10000;
+        this.result = 0;
     }
 
     /**
@@ -38,6 +47,9 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     @Override
     public void initialize(Long size) {
         this.scale = size.intValue();
+        this.result = 0;
+        this.piResult = new BigDecimal(0);
+        this.initialize();
     }
 
     public void warmup(){
@@ -54,6 +66,15 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
 
     @Override
     public void run() {
+        this.warmup();
+        final Timer timer = new Timer();
+        timer.start();
+        this.compute();
+        this.result = timer.stop();
+    }
+
+    @Override
+    public void compute() {
         this.shouldTestRun = true;
         MathContext context = new MathContext(this.scale);
         final ExecutorService threadPool = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
@@ -71,14 +92,12 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
                 piResult = piResult.add(result.get(), context);
             } catch (Exception e) {
                 if (shouldTestRun) {
-                    // Something went wrong
-                    //TODO What do we do now ?
                     Log.d(PiDigitsCPUBenchmark.class.getName(), e.getMessage());
                 }
             }
         }
-        threadPool.shutdownNow();
         this.shouldTestRun = false;
+        threadPool.shutdownNow();
     }
 
     @Override
@@ -87,7 +106,8 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     }
 
     @Override
-    public void clean() {}
+    public void clean() {
+    }
 
     public BigDecimal getPi(){
         return this.piResult;
@@ -138,6 +158,13 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     }
 
     @Override
+    public Score getScore() {
+        return new Score(
+                Benchmarks.PIBenchmark.toString(),
+                Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
+                this.extra);
+    }
+
     public Object getResult(){
         return new Object();
     }
