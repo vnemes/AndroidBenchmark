@@ -4,12 +4,12 @@
         "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_pressed.9.png"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal.9.png",
-        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal.9.png"
-    },
-    {
         "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_pressed.9.png",
         "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal.9.png",
+        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal.9.png"
     },
     {
         "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",

@@ -18,6 +18,8 @@ public class DeviceInfo {
         return model;
     }
 
+    public static String getFullDeviceName(){return manufacturer+" "+model; }
+
     private static String capitalize(String s) {
         if (s == null || s.length() == 0) {
             return "";

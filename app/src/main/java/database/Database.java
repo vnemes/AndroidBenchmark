@@ -1,12 +1,9 @@
 package database;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
+import android.content.Context;
 import android.support.annotation.NonNull;
-import android.text.Html;
 import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -16,72 +13,99 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import vendetta.androidbenchmark.MainActivity;
+
 /**
  * Created by Vendetta on 06-May-17.
  */
 
 public class Database {
     public ProgressDialog mProgressDialog;
-    private static final String TAG = "Auth";
+    private static final String TAG = "DB ";
     private static String uid;
-    protected FirebaseAuth mAuth;
+    protected static FirebaseAuth mAuth;
     private static FirebaseDatabase database;
-    private static DatabaseReference databaseRef;
+    private static DatabaseReference databaseUserScoreRef;
     private static ValueEventListener databaseListener;
-
-    private static FirebaseAuth.AuthStateListener mAuthListener = new FirebaseAuth.AuthStateListener() {
-        @Override
-        public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-            FirebaseUser user = firebaseAuth.getCurrentUser();
-            if (user != null) {
-                uid = user.getUid();
-            }
-            // User is signed in
-            //TODO: Remove mail access, replace with anon auth
-            if (uid != null) {
-                Log.d("debug","User is logged in!");
-                database = FirebaseDatabase.getInstance();
-                databaseRef = database.getReference().child("users").child(uid);
-                databaseListener = databaseRef.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        // This method is called once with the initial value and again
-                        // whenever data at this location is updated.
-
-                        //DBWeek = dataSnapshot.getValue(Week.class);
-                        //JsonWeek = JsonHandler.getFileContent();
-                        Log.d("DB", "Value read from DB");
-//                            if (JsonWeek != null){
-//                                Log.d("debug", "Json not null");
-//                                if (JsonWeek.getData().isEmpty()) {
-//                                    Log.d("debug", "Json is empty");
-//                                    if (!isEmpty()) {
-//                                        Log.d("debug", "Email week not null");
-//                                        JsonHandler.postFileContent(DBWeek);
-//                                    }
-//                                } else{
-//                                    Log.d("debug", "Json not empty, wait for user save");
-//                                    //updateWeek(JsonWeek);
-//                                    DBWeek = JsonWeek;
-//                                }
-//                            }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError error) {
-                        // Failed to read value
-                        Log.w("DB:", "Failed to read value.", error.toException());
+    private static FirebaseAuth.AuthStateListener mAuthListener;
+    private static UserScores dbUserScores = new UserScores();
+    private static Context mainActivityContext;
+    private static Score benchScore;
 
 
-                    }
-                });
-                Log.d(TAG, "onAuthStateChanged:signed_in:" + uid);
-            } else {
-                Log.d(TAG, "onAuthStateChanged:signed_out");
-                //TODO: Anonymously authenticate the user here!
-            }
+    public static void establishConnection(Context context) {
+        if (mAuth == null) {
+            initialize(context);
         }
-    };
+    }
+
+    private static void initialize(Context context) {
+        //initialize thingies here.
+        mainActivityContext = context;
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    uid = user.getUid();
+                    Log.d(TAG, uid +"connected");
+                }
+                // User is signed in
+                if (uid != null) {
+                    Log.d(TAG, "User " + uid + " is logged in!");
+                    (database = FirebaseDatabase.getInstance()).setPersistenceEnabled(true);
+                    databaseUserScoreRef = database.getReference().child("users").child(uid);
+                    databaseListener = databaseUserScoreRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            // This method is called once with the initial value and again
+                            // whenever data at this location is updated.
+                            UserScores dbUserScoresData = dataSnapshot.getValue(UserScores.class);
+                            if (dbUserScoresData != null)
+                                dbUserScores.updateAll(dbUserScoresData);
+                            MainActivity.updateScores(dbUserScores,mainActivityContext);
+                            Log.d(TAG, "UserScores read from DB");
+                        }
+                        @Override
+                        public void onCancelled(DatabaseError error) {
+                            Log.w(TAG, "Failed to read value.", error.toException());
+                        }
+                    });
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + uid);
+                } else {
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                    mAuth.signInAnonymously();
+                }
+            }
+        };
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    public static void postBenchScore(Score score){
+        database.getReference().child(score.getBenchName()).child(uid).setValue(score);
+    }
+
+    public static Score getBenchScore(String benchmarkName){
+        database.getReference().child(benchmarkName).child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                benchScore = dataSnapshot.getValue(Score.class);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.d(TAG, "Failed to read value.", error.toException());
+                benchScore = null;
+            }
+        });
+        return benchScore;
+    }
+
+    public static UserScores getUserScores(){
+        return dbUserScores;
+    }
+
 
 
 }
