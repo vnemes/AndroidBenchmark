@@ -8,7 +8,9 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
+import benchmark.Benchmarks;
 import benchmark.IBenchmark;
+import database.Score;
 import log.ConsoleLogger;
 import stopwatch.Timer;
 
@@ -26,12 +28,13 @@ public class DownloadSpeedNetworkBenchmark implements IBenchmark {
 
     private long size = 1024 * 1024 * 128; // How much to download.
     private double result = 0; // MB/SECOND
+    private String extra;
     private ConsoleLogger logger = new ConsoleLogger();
     private boolean shouldTestRun;
 
     @Override
     public void initialize() {
-        // Default size
+        this.result = 0;
     }
 
     /**
@@ -54,6 +57,11 @@ public class DownloadSpeedNetworkBenchmark implements IBenchmark {
 
     @Override
     public void run() {
+        this.compute();
+    }
+
+    @Override
+    public void compute() {
         this.shouldTestRun = true;
         logger.write("Benchmark started");
         int bufferSize = Math.min(BUFFER_SIZE, (int)size);
@@ -80,7 +88,6 @@ public class DownloadSpeedNetworkBenchmark implements IBenchmark {
                     break;
                 }
                 totalDownload += bufferSize;
-                logger.write("Hello: " + measure + " double " + (measure / 1000000000.0));
                 logger.write("Download " + bufferSize + " " + (bufferSize / (1024 * 1024)));
                 measurements.add((double)bufferSize / (1024 * 1024) / (measure / 1000000000.0));
             }
@@ -109,6 +116,14 @@ public class DownloadSpeedNetworkBenchmark implements IBenchmark {
 
     public double getResult() {
         return this.result;
+    }
+
+    @Override
+    public Score getScore() {
+        return new Score(
+                Benchmarks.NetworkBenchmark.toString(),
+                String.format(java.util.Locale.US,"%.3f", this.result),
+                this.extra);
     }
 
     @Override

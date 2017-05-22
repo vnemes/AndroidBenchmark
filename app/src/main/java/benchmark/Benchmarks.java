@@ -5,6 +5,9 @@ package benchmark;
  */
 
 public enum Benchmarks {
+    FloatingPointBenchmark,
+    IntegerBenchmark,
+    PIBenchmark,
     CPUBenchmark,
     HashingBenchmark,
     NetworkBenchmark,

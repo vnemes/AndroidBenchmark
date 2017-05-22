@@ -1,5 +1,7 @@
 package benchmark;
 
+import database.Score;
+
 /**
  * Created by Vendetta on 07-Mar-17.
  */
@@ -50,4 +52,13 @@ public interface IBenchmark {
      */
     public String getInfo();
 
+    /**
+     * @return Benchmark score
+     */
+    public Score getScore();
+
+    /**
+     * Does the actual computation.
+     */
+    public void compute();
 }

@@ -1,6 +1,10 @@
 package benchmark.cpubenchmark;
 
+import benchmark.Benchmarks;
 import benchmark.IBenchmark;
+import database.Score;
+import log.myTimeUnit;
+import stopwatch.Timer;
 
 /**
  * Created by Vendetta on 16-Mar-17.
@@ -9,15 +13,19 @@ import benchmark.IBenchmark;
 public class FloatingPointMathCPUBenchmark implements IBenchmark {
     private Long size = Long.MAX_VALUE;
     private boolean shouldTestRun;
+    private String extra;
+    private long result;
 
     @Override
     public void initialize() {
-        throw new UnsupportedOperationException();
+        this.size = 1000000000L;
+        this.result = 0;
     }
 
     @Override
     public void initialize(Long size) {
         this.size = size;
+        this.result = 0;
     }
 
     @Override
@@ -36,11 +44,20 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
         throw new UnsupportedOperationException();
     }
 
+    @Override
+    public void run() {
+        final Timer timer = new Timer();
+        this.warmup();
+        timer.start();
+        this.compute();
+        this.result = timer.stop();
+    }
+
     /**
      * Approximates square roots using the Babylonian Method.
      */
     @Override
-    public void run() {
+    public void compute() {
         this.shouldTestRun = true;
         double sqrtPi = 1.0; // sqrt of PI
         double sqrtE = 1.0;  // sqrt of Euler's number
@@ -65,5 +82,14 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
     @Override
     public String getInfo(){
         return "";
+    }
+
+    @Override
+    public Score getScore() {
+        return new Score(
+                Benchmarks.FloatingPointBenchmark.toString(),
+                Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
+                this.extra
+        );
     }
 }

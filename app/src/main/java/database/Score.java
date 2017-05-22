@@ -22,6 +22,12 @@ public class Score {
         this.extra = extra;
     }
 
+    public Score(String benchName, String result, String extra) {
+        this.benchName = benchName;
+        this.result = result;
+        this.extra = extra;
+    }
+
     public String getBenchName() {
         return benchName;
     }

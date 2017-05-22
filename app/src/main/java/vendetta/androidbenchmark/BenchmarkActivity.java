@@ -17,6 +17,7 @@ import android.widget.TextView;
 import java.lang.reflect.InvocationTargetException;
 
 import benchmark.IBenchmark;
+import database.Score;
 import log.myTimeUnit;
 import stopwatch.Timer;
 
@@ -119,16 +120,16 @@ public class BenchmarkActivity extends BaseActivity {
             }
         }.execute();
         */
-        new AsyncTask<Void, Void, Long>() {
-            protected Long doInBackground(Void... params) {
+        new AsyncTask<Void, Void, Score>() {
+            protected Score doInBackground(Void... params) {
 //                logger.write("Benchmark is starting...");
-                timer.start();
                 benchmark.run();
-                return timer.stop();
+                benchmark.clean();
+                return benchmark.getScore();
             }
 
-            protected void onPostExecute(Long time) {
-                result.append("Hashing: " + myTimeUnit.convertTime(time, myTimeUnit.MilliSecond));
+            protected void onPostExecute(Score score) {
+                result.append("Hashing: " + score.getResult());
                 progressBar.setVisibility(View.GONE);
             }
         }.execute();
