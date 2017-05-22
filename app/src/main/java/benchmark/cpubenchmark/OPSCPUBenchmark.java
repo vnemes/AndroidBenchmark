@@ -1,4 +1,4 @@
-package benchmark.CPUbenchmark;
+package benchmark.cpubenchmark;
 
 import java.util.ArrayList;
 import java.util.Random;

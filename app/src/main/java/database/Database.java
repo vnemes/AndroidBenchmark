@@ -54,7 +54,8 @@ public class Database {
                 // User is signed in
                 if (uid != null) {
                     Log.d(TAG, "User " + uid + " is logged in!");
-                    (database = FirebaseDatabase.getInstance()).setPersistenceEnabled(true);
+                    FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+                    database = FirebaseDatabase.getInstance();
                     databaseUserScoreRef = database.getReference().child("users").child(uid);
                     databaseListener = databaseUserScoreRef.addValueEventListener(new ValueEventListener() {
                         @Override

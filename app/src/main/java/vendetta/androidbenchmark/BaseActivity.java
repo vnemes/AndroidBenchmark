@@ -16,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import benchmark.Benchmarks;
 import info.DeviceInfo;
 
 /**
@@ -25,6 +27,7 @@ import info.DeviceInfo;
 public class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static final String BENCH_NAME = "benchName";
     private FrameLayout view_stub; //This is the framelayout to keep your content view
 
     @Override
@@ -108,7 +111,7 @@ public class BaseActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            return true; //TODO go to info screen
         }
 
         return super.onOptionsItemSelected(item);
@@ -119,26 +122,23 @@ public class BaseActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Intent benchActivityIntent = new Intent(getApplicationContext(),BenchmarkActivity.class);
 
         if (id == R.id.nav_cpubench) {
-
-            Intent cpuIntent = new Intent(getApplicationContext(),CPUBenchActivity.class);
-            startActivity(cpuIntent);
-
-        } else if (id == R.id.nav_mopsbench) {
-            Intent cpuIntent = new Intent(getApplicationContext(),MOPSActivity.class);
-            startActivity(cpuIntent);
-
+            benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.CPUBenchmark.toString());
+        } else if (id == R.id.nav_hashbench) {
+            benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.HashingBenchmark.toString());
         } else if (id == R.id.nav_filebench) {
-
-        } else if (id == R.id.nav_pibench) {
-
+            benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.HDDBenchmark.toString());
+        } else if (id == R.id.nav_netbench) {
+            benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.NetworkBenchmark.toString());
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_leaderboard) {
-
+            benchActivityIntent = new Intent(getApplicationContext(),BenchmarkActivity.class);
+        } else if (id == R.id.nav_leaderboard) { //TODO update share and leaderboard to launch other activities
+            benchActivityIntent = new Intent(getApplicationContext(),BenchmarkActivity.class);
         }
 
+        startActivity(benchActivityIntent);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

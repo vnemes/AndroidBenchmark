@@ -23,7 +23,7 @@
             android:name=".BaseActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".CPUBenchActivity"
+            android:name=".BenchmarkActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".MOPSActivity"

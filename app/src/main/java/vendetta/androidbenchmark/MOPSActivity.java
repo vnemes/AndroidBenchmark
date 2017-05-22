@@ -1,6 +1,5 @@
 package vendetta.androidbenchmark;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +8,7 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
-import benchmark.CPUbenchmark.OPSCPUBenchmark;
-import log.myTimeUnit;
-import stopwatch.Timer;
+import benchmark.cpubenchmark.OPSCPUBenchmark;
 
 public class MOPSActivity extends BaseActivity {
     private OPSCPUBenchmark bench;

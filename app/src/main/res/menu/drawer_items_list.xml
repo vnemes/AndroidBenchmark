@@ -7,17 +7,17 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="CPU Benchmark" />
         <item
-            android:id="@+id/nav_mopsbench"
+            android:id="@+id/nav_hashbench"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="MOPS Benchmark" />
+            android:title="Hashing Benchmark" />
         <item
             android:id="@+id/nav_filebench"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="File Access Benchmark" />
         <item
-            android:id="@+id/nav_pibench"
+            android:id="@+id/nav_netbench"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Digits Of Pi Benchmark" />
+            android:title="Network Benchmark" />
     </group>
 
     <item android:title="Online">

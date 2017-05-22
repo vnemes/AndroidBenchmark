@@ -1,4 +1,4 @@
-package benchmark.NetworkBenchmark;
+package benchmark.networkbenchmark;
 
 import java.io.DataInput;
 import java.io.DataInputStream;
@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 import benchmark.IBenchmark;
 import log.ConsoleLogger;
-import log.myTimeUnit;
 import stopwatch.Timer;
 
 /**

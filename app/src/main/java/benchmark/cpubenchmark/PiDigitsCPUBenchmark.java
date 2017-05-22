@@ -1,4 +1,4 @@
-package benchmark.CPUbenchmark;
+package benchmark.cpubenchmark;
 
 import android.util.Log;
 import benchmark.IBenchmark;
@@ -9,7 +9,6 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Created by Vendetta on 09-Mar-17.
