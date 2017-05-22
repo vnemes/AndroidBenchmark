@@ -7,17 +7,24 @@ import info.DeviceInfo;
  */
 
 public class Score {
-    private static final String device = DeviceInfo.getFullDeviceName();
+    private String device = DeviceInfo.getFullDeviceName();
     private String benchName;
     private String uid;
     private String result;
     private String extra;
 
-    public Score(){}
+    public Score() {
+    }
 
     public Score(String benchName, String uid, String result, String extra) {
         this.benchName = benchName;
         this.uid = uid;
+        this.result = result;
+        this.extra = extra;
+    }
+
+    public Score(String benchName, String result, String extra) {
+        this.benchName = benchName;
         this.result = result;
         this.extra = extra;
     }
@@ -37,7 +44,16 @@ public class Score {
     public String getExtra() {
         return extra;
     }
-    public static String getDevice() {
+
+    public String getDevice() {
         return device;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String toString(){
+        return benchName+" "+uid+" "+result+" "+device+" "+extra;
     }
 }

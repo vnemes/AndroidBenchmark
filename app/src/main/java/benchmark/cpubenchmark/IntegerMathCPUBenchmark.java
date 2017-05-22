@@ -64,4 +64,9 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
     public String getInfo(){
         return "";
     }
+
+    @Override
+    public Object getResult(){
+        return new Object();
+    }
 }

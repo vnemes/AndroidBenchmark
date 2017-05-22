@@ -50,4 +50,6 @@ public interface IBenchmark {
      */
     public String getInfo();
 
+    public Object getResult();
+
 }

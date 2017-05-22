@@ -126,4 +126,9 @@ public class OPSCPUBenchmark implements IBenchmark {
     public String getInfo(){
         return "";
     }
+
+    @Override
+    public Object getResult(){
+        return new Object();
+    }
 }
