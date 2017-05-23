@@ -52,6 +52,7 @@
         android:shadowRadius="5"
         android:text="Run full Benchmark Suite"
         android:layout_alignBottom="@+id/scrollView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="startFullBenchmark"/>
 
 </RelativeLayout>
