@@ -16,7 +16,8 @@ out/
 # Gradle files
 .gradle/
 build/
-app/build
+app/build/intermediates
+*/build/
 
 # Local configuration file (sdk path, etc)
 local.properties
