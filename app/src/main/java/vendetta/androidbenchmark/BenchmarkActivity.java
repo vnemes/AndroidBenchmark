@@ -89,58 +89,32 @@ public class BenchmarkActivity extends BaseActivity {
         progressBar.setVisibility(View.VISIBLE);
         result.append("\n\nRunning!");
 
-        /*
-        intBench.warmup();
-        timer.start();
-        intBench.run();
-        Long intBenchResult = timer.stop();
-        result.setText("int: " + myTimeUnit.convertTime(intBenchResult, myTimeUnit.MilliSecond));
 
-        floatBench.warmup();
-        timer.start();
-        floatBench.run();
-        Long floatBenchResult = timer.stop();
-        result.append("\nfloat: " + myTimeUnit.convertTime(floatBenchResult, myTimeUnit.MilliSecond));
-
-        piBench.warmup();
-        timer.start();
-        piBench.run();
-        Long piBenchResult = timer.stop();
-
-        logger.write(piBench.getPi().toString());
-        result.append("\nPI: " + myTimeUnit.convertTime(piBenchResult, myTimeUnit.MilliSecond));
-        */
-        /*
-        new AsyncTask<Void, Void, Double>() {
-            protected Double doInBackground(Void... params) {
-                networkSpeedBench.run();
-                return networkSpeedBench.getResult();
-            }
-
-            protected void onPostExecute(Double mbs) {
-                result.append("Network: " + String.format(java.util.Locale.US,"%.3f", mbs));
-            }
-        }.execute();
-        */
         new AsyncTask<Void, Void, Score>() {
             protected Score doInBackground(Void... params) {
-//                logger.write("Benchmark is starting...");
                 benchmark.run();
-                benchmark.clean();
                 return benchmark.getScore();
             }
 
+//        new AsyncTask<Void, Void, Score>() {
+//            protected Score doInBackground(Void... params) {
+////                logger.write("Benchmark is starting...");
+//                benchmark.run();
+//                benchmark.clean();
+//                return benchmark.getScore();
+//            }
+//
+//            protected void onPostExecute(Score score) {
+//                result.append("Hashing: " + score.getResult());
+//            }
+
             protected void onPostExecute(Score score) {
-                result.append("Hashing: " + score.getResult());
-            }
-/*
-            protected void onPostExecute(Long time) {
-                result.setText(Double.longBitsToDouble(time)+"  MB/s");
-                Database.postBenchScore(new Score(benchName, String.valueOf(Double.longBitsToDouble(time)),""));
-                Score s = Database.getBenchScore(benchName);
+                result.setText(benchmark.getScore().toString());
+                Database.postBenchScore(benchmark.getScore());
                 progressBar.setVisibility(View.GONE);
+                Database.getBenchScore(benchName);
             }
-            */
+
         }.execute();
     }
 

@@ -54,6 +54,7 @@ public class Score {
     public void setUid(String uid) {
         this.uid = uid;
     }
+
     public HashMap<String,Object> toMap(){
         HashMap<String,Object> ret= new HashMap<>();
         ret.put(benchName,result);

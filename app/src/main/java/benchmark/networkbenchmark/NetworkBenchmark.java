@@ -28,7 +28,7 @@ public class NetworkBenchmark implements IBenchmark {
     private static final int MAX_FILE_SIZE = 1024 * 1024 * 512;
     private static final int BUFFER_SIZE = 1024 * 1024 * 16; // Buffer size in bytes.
 
-    private long size = 1024 * 1024 * 128; // How much to download.
+    private long size = 1024 * 1024 * 64; // How much to download.
     private double result = 0; // MB/SECOND
     private String extra;
     private ConsoleLogger logger = new ConsoleLogger();
@@ -98,7 +98,7 @@ public class NetworkBenchmark implements IBenchmark {
                 logger.write("" + String.format(java.util.Locale.US,"%.6f", each));
                 sum += each;
             }
-            this.result = sum / measurements.size();
+            this.result = sum * 4 / measurements.size();
         } catch (IOException e) {
             logger.write(e.toString());
         } finally {
@@ -113,7 +113,7 @@ public class NetworkBenchmark implements IBenchmark {
 
     @Override
     public void clean() {
-        throw new UnsupportedOperationException();
+
     }
 
     @Override

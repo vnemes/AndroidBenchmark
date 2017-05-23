@@ -13,6 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import vendetta.androidbenchmark.MainActivity;
@@ -66,9 +67,11 @@ public class Database {
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             // This method is called once with the initial value and again
                             // whenever data at this location is updated.
-                            UserScores dbUserScoresData = dataSnapshot.getValue(UserScores.class);
-                            if (dbUserScoresData != null)
-                                dbUserScores.updateAll(dbUserScoresData);
+
+                            dbUserScores.updateAll((HashMap<String,String>) dataSnapshot.getValue());
+//                            UserScores dbUserScoresData = dataSnapshot.getValue(UserScores.class);
+//                            if (dbUserScoresData != null)
+//                                dbUserScores.updateAll(dbUserScoresData);
                             MainActivity.updateScores(dbUserScores,mainActivityContext);
                             Log.d(TAG, "UserScores read from DB");
                         }

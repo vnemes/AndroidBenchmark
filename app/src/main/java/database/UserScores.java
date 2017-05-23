@@ -20,8 +20,20 @@ public class UserScores {
         }
     }
 
+    public UserScores(HashMap<String,String> paramMap){
+        for (Benchmarks bench: Benchmarks.values()){
+            scoreMap.put(bench.toString(),"Tap to run!");
+        }
+        scoreMap.putAll(paramMap);
+
+    }
+
     public void updateAll(UserScores dbUserScores){
         scoreMap.putAll(dbUserScores.scoreMap);
+    }
+
+    public void updateAll(HashMap<String,String> dbUserScores){
+        scoreMap.putAll(dbUserScores);
     }
 
     public HashMap<String, String> getScoreMap() {
