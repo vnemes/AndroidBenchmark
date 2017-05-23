@@ -30,12 +30,6 @@ public class BenchmarkActivity extends BaseActivity {
     private TextView result;
     private ProgressBar progressBar;
     private String benchName;
-//    private IntegerMathCPUBenchmark intBench;
-//    private FloatingPointMathCPUBenchmark floatBench;
-//    private PiDigitsCPUBenchmark piBench;
-//    private NetworkBenchmark networkSpeedBench;
-//    private HashingBenchmark hashingBench;
-//    private ConsoleLogger logger = new ConsoleLogger();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,21 +57,6 @@ public class BenchmarkActivity extends BaseActivity {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
-
-
-//        intBench = new IntegerMathCPUBenchmark();
-//        floatBench = new FloatingPointMathCPUBenchmark();
-//        piBench = new PiDigitsCPUBenchmark();
-//        networkSpeedBench = new NetworkBenchmark();
-//        hashingBench = new HashingBenchmark();
-//
-//        hashingBench.initialize(100L);
-//        networkSpeedBench.initialize(1024 * 1024 * 128L);
-//        intBench.initialize(1000000000L);
-//        floatBench.initialize(1000000000L);
-//        piBench.initialize(10000L);
-
-
     }
 
     /**
