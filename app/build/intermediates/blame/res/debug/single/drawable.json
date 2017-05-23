@@ -1,222 +1,222 @@
 [
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ic_clear_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\notification_bg.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\buttonshape.xml",
+        "source": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\buttonshape.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_dialog_material_background.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\buttonshape.xml",
-        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\buttonshape.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\notification_tile_bg.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_camera.xml",
+        "source": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_camera.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ratingbar_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_btn_radio_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
+        "source": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\d1851906fa417c5233b9acd28180b66f4366fcd4\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\notification_bg.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\7e0e1ded1af81b7549e9d5433cf05d805702cc73\\output\\res\\drawable\\design_fab_background.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_focused.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_gallery.xml",
-        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_gallery.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_focused.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\d1851906fa417c5233b9acd28180b66f4366fcd4\\output\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
-        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\notification_bg_low.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\7e0e1ded1af81b7549e9d5433cf05d805702cc73\\output\\res\\drawable\\navigation_empty_icon.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_manage.xml",
-        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_manage.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\d1851906fa417c5233b9acd28180b66f4366fcd4\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_slideshow.xml",
-        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_slideshow.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\e9634edbc6daeaddc28367c69ff429e4fc76739d\\output\\res\\drawable\\design_snackbar_background.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_text_cursor_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\notification_tile_bg.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\e9634edbc6daeaddc28367c69ff429e4fc76739d\\output\\res\\drawable\\design_fab_background.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\d1851906fa417c5233b9acd28180b66f4366fcd4\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_focused.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_share.xml",
+        "source": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_share.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_cab_background_top_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\7e0e1ded1af81b7549e9d5433cf05d805702cc73\\output\\res\\drawable\\design_snackbar_background.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\d1851906fa417c5233b9acd28180b66f4366fcd4\\output\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_focused.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\d1851906fa417c5233b9acd28180b66f4366fcd4\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_gallery.xml",
+        "source": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_gallery.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_share.xml",
-        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_share.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_focused.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\d1851906fa417c5233b9acd28180b66f4366fcd4\\output\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\e9634edbc6daeaddc28367c69ff429e4fc76739d\\output\\res\\drawable\\navigation_empty_icon.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_textfield_search_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_focused.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\d1851906fa417c5233b9acd28180b66f4366fcd4\\output\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_vector_test.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_slideshow.xml",
+        "source": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_slideshow.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\notification_icon_background.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_send.xml",
+        "source": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_send.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_camera.xml",
-        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_camera.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\b1cedc63c8e93a1d7ba99456bf6b4a5890cec6b5\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_btn_check_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\notification_bg_low.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_manage.xml",
+        "source": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_manage.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_send.xml",
-        "source": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\src\\main\\res\\drawable\\ic_menu_send.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "D:\\Courses\\Y2S2\\CO\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
-        "source": "D:\\IDEs\\.android\\build-cache\\072923e3f2427a2bbf1a13c172bcfe5ca9a5b36f\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+        "merged": "C:\\Users\\alex\\AndroidStudioProjects\\AndroidBenchmark\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\alex\\.android\\build-cache\\8f01532c1c8b62aa77a3a08468370c08d7d2ec98\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
     }
 ]
