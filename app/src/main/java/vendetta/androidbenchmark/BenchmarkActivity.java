@@ -91,7 +91,9 @@ public class BenchmarkActivity extends BaseActivity {
                 result.setText(benchmark.getScore().toString());
                 Database.postBenchScore(benchmark.getScore());
                 progressBar.setVisibility(View.GONE);
-                Database.getBenchScore(benchName);
+                Intent scoreActivityIntent = new Intent(getApplicationContext(),ScoreActivity.class);
+                scoreActivityIntent.putExtra(BENCH_NAME,benchName);
+                startActivity(scoreActivityIntent);
             }
 
         }.execute();

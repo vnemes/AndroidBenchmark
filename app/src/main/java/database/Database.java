@@ -17,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import vendetta.androidbenchmark.MainActivity;
+import vendetta.androidbenchmark.ScoreActivity;
 
 /**
  * Created by Vendetta on 06-May-17.
@@ -33,7 +34,6 @@ public class Database {
     private static FirebaseAuth.AuthStateListener mAuthListener;
     private static UserScores dbUserScores = new UserScores(true);
     private static Context mainActivityContext;
-    private static Score benchScore;
 
 
     public static void establishConnection(Context context) {
@@ -97,25 +97,24 @@ public class Database {
         Log.d("DB ","posted "+score.toString());
     }
 
-    public static Score getBenchScore(String benchmarkName){
+    public static void getBenchScore(String benchmarkName){
         database.getReference().child("benchmarks").child(benchmarkName).child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                benchScore = dataSnapshot.getValue(Score.class);
-                Log.d("DB ","got "+benchScore.toString());
+                ScoreActivity.updateResult(dataSnapshot.getValue(Score.class));
+                Log.d(TAG, "BenchmarkScore read from DB");
             }
 
             @Override
             public void onCancelled(DatabaseError error) {
                 Log.d(TAG, "Failed to read value.", error.toException());
-                benchScore = null;
             }
         });
-        return benchScore;
     }
 
-    public static UserScores getUserScores(){
-        return dbUserScores;
+    public static void getRankings(String benchmarName){
+        //TODO implement database query to get a sorted list of RankScore
+        //then call ScoreActivity.updateRanking(scoreList)
     }
 
 
