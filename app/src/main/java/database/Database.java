@@ -13,6 +13,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Map;
+
 import vendetta.androidbenchmark.MainActivity;
 
 /**
@@ -28,7 +30,7 @@ public class Database {
     private static DatabaseReference databaseUserScoreRef;
     private static ValueEventListener databaseListener;
     private static FirebaseAuth.AuthStateListener mAuthListener;
-    private static UserScores dbUserScores = new UserScores();
+    private static UserScores dbUserScores = new UserScores(true);
     private static Context mainActivityContext;
     private static Score benchScore;
 
@@ -88,6 +90,7 @@ public class Database {
     public static void postBenchScore(Score score){
         score.setUid(uid);
         database.getReference().child("benchmarks").child(score.getBenchName()).child(uid).setValue(score);
+        databaseUserScoreRef.updateChildren(score.toMap());
         Log.d("DB ","posted "+score.toString());
     }
 

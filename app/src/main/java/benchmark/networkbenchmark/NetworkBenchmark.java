@@ -106,7 +106,6 @@ public class NetworkBenchmark implements IBenchmark {
 
     @Override
     public void clean() {
-        throw new UnsupportedOperationException();
     }
 
     public Object getResult() {

@@ -11,7 +11,9 @@ import benchmark.Benchmarks;
 public class UserScores {
     private HashMap<String,String> scoreMap;
 
-    public UserScores(){
+    public UserScores(){ }
+
+    public UserScores(boolean x){
         scoreMap = new HashMap<>();
         for (Benchmarks bench: Benchmarks.values()){
             scoreMap.put(bench.toString(),"Tap to run!");
@@ -22,7 +24,7 @@ public class UserScores {
         scoreMap.putAll(dbUserScores.scoreMap);
     }
 
-    public  HashMap<String, String> getScoreMap() {
+    public HashMap<String, String> getScoreMap() {
         return this.scoreMap;
     }
 
