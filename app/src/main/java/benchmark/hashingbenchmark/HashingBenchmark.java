@@ -132,8 +132,4 @@ public class HashingBenchmark implements IBenchmark {
                 "Hashes passwords using the BCrypt algorithm.";
     }
 
-    @Override
-    public Object getResult() {
-        return new Object();
-    }
 }

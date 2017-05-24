@@ -83,8 +83,4 @@ public class CPUBenchmark implements IBenchmark {
 
     }
 
-    @Override
-    public Object getResult() {
-        return null;
-    }
 }

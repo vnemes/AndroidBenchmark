@@ -62,5 +62,4 @@ public interface IBenchmark {
      */
     public void compute();
 
-    public Object getResult();
 }
