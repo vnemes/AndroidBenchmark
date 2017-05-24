@@ -132,6 +132,7 @@ public class BenchmarkActivity extends BaseActivity {
 
             protected void onPostExecute(Score score) {
                 result.append("Hashing: " + score.getResult());
+                progressBar.setVisibility(View.GONE);
             }
 /*
             protected void onPostExecute(Long time) {
