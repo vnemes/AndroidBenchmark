@@ -1,6 +1,5 @@
 package benchmark.cpubenchmark;
 
-import benchmark.Benchmarks;
 import benchmark.IBenchmark;
 import database.Score;
 import log.myTimeUnit;
@@ -91,7 +90,4 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
         );
     }
 
-    public Object getResult(){
-        return new Object();
-    }
 }

@@ -1,7 +1,5 @@
 package benchmark.networkbenchmark;
 
-import android.util.Log;
-
 import java.io.DataInput;
 import java.io.DataInputStream;
 import java.io.EOFException;
@@ -122,11 +120,6 @@ public class NetworkBenchmark implements IBenchmark {
                 Benchmarks.NetworkBenchmark.toString(),
                 String.format(java.util.Locale.US,"%.3f", this.result),
                 this.extra);
-    }
-
-    public Object getResult() {
-        Log.d("Debug ", Double.toString(result));
-        return this.result;
     }
 
     @Override

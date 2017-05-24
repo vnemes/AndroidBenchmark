@@ -106,9 +106,4 @@ public class FilesBenchmark implements IBenchmark {
         }
         this.result = timer.stop();
     }
-
-    @Override
-    public Object getResult() {
-        return null;
-    }
 }

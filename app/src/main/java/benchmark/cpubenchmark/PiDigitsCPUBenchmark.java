@@ -2,7 +2,6 @@ package benchmark.cpubenchmark;
 
 import android.util.Log;
 
-import benchmark.Benchmarks;
 import benchmark.IBenchmark;
 import database.Score;
 import log.myTimeUnit;
@@ -30,11 +29,10 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     private static final int TOTAL_ITERATIONS = 5000; // More iterations results in better accuracy.
 
     private boolean shouldTestRun;
-    private String extra;
     private long result;
     private BigDecimal piResult = new BigDecimal(0);
     private int scale = 5000; // The scale should usually be equal to TOTAL_ITERATIONS
-    private ArrayList<Future<BigDecimal>> chunksResult;
+    private ArrayList<Future<BigDecimal>> chunksResult = new ArrayList<>();
 
     @Override
     public void initialize() {
@@ -80,7 +78,6 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
         MathContext context = new MathContext(this.scale);
         final ExecutorService threadPool = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
         final int chunkSize = TOTAL_ITERATIONS / THREAD_POOL_SIZE;
-        chunksResult = new ArrayList<>();
 
         for (int chunkStart = 0; chunkStart < TOTAL_ITERATIONS; chunkStart += chunkSize) {
             chunksResult.add(threadPool.submit(new ComputeChunk(chunkStart, Math.min(chunkStart + chunkSize, TOTAL_ITERATIONS), context)));
@@ -169,7 +166,4 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
                 "Computed "+ scale+" digits of PI in "+ Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.Second))+" seconds");
     }
 
-    public Object getResult(){
-        return new Object();
-    }
 }

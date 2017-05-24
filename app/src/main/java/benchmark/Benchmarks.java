@@ -1,16 +1,17 @@
 package benchmark;
 
+import benchmark.benchmarksuite.BenchmarkSuite;
+
 /**
  * Created by Vendetta on 20-May-17.
  */
 
 public enum Benchmarks {
-    //FloatingPointBenchmark,
-    //IntegerBenchmark,
-    //PIBenchmark,
+    //GPUBenchmark,
     CPUBenchmark,
     HashingBenchmark,
     NetworkBenchmark,
     //GPUBenchmark,
-    FilesBenchmark;
+    FilesBenchmark,
+    BenchmarkSuite
 }
