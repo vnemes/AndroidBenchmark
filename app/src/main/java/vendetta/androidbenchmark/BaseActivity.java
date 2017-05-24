@@ -45,6 +45,7 @@ public class BaseActivity extends AppCompatActivity
         TextView modelTextView = (TextView) header.findViewById(R.id.modeltxtview);
         Log.d("Manufacturer: ", DeviceInfo.getManufacturer());
         Log.d("Model: ", DeviceInfo.getModel());
+        Log.d("FullName: ", DeviceInfo.getFullDeviceName());
         manufacturerTextView.setText("Manufacturer: " + DeviceInfo.getManufacturer());
         modelTextView.setText("Model: " + DeviceInfo.getModel());
 

@@ -82,7 +82,7 @@ public class FilesBenchmark implements IBenchmark {
     public Score getScore() {
         return new Score(
                 Benchmarks.FilesBenchmark.toString(),
-                String.format(java.util.Locale.US,"%.3f", FILE_SIZE / (1024 * 1024.0) / myTimeUnit.convertTime(this.result, myTimeUnit.Second)),
+                String.format(java.util.Locale.US,"%.3f", (FILE_SIZE / (1024 * 1024.0) )/ (this.result/1000000000.0)),
                 this.extra);
     }
 
@@ -103,7 +103,7 @@ public class FilesBenchmark implements IBenchmark {
         timer.start();
         for (int i = 0; i < FILE_SIZE && this.shouldTestRun; i += BUFFER_SIZE) {
             rand.nextBytes(buffer);
-            logger.write("ok");
+            //logger.write("ok");
             try {
                 outputStream.write(buffer);
             } catch (Exception e) {
