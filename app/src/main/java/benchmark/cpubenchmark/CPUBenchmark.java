@@ -1,5 +1,6 @@
 package benchmark.cpubenchmark;
 
+import benchmark.Benchmarks;
 import benchmark.IBenchmark;
 import database.Score;
 
@@ -58,12 +59,18 @@ public class CPUBenchmark implements IBenchmark {
 
     @Override
     public String getInfo() {
-        return null;
+        return intBench.getInfo()+"\n"+floatBench.getInfo()+"\n"+piBench.getInfo();
     }
 
     @Override
     public Score getScore() {
-        return null;
+        Score intScore = intBench.getScore();
+        Score floatScore = floatBench.getScore();
+        Score piScore = piBench.getScore();
+        long result = (long)Math.pow((double)Long.parseLong(intScore.getResult())*Long.parseLong(floatScore.getResult())*Long.parseLong(piScore.getResult()),1.0/3);
+        return new Score(Benchmarks.CPUBenchmark.toString(),
+               Long.toString(result),
+                intScore.getExtra()+"\n"+floatScore.getExtra()+"\n"+piScore.getExtra());
     }
 
     @Override
