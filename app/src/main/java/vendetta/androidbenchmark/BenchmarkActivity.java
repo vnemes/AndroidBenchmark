@@ -19,7 +19,6 @@ import java.lang.reflect.InvocationTargetException;
 import benchmark.IBenchmark;
 import database.Database;
 import database.Score;
-import log.myTimeUnit;
 import stopwatch.Timer;
 
 /**
@@ -27,31 +26,28 @@ import stopwatch.Timer;
  */
 public class BenchmarkActivity extends BaseActivity {
     private IBenchmark benchmark = null;
-    private TextView result;
+    private TextView benchDescriptionTV;
     private ProgressBar progressBar;
     private String benchName;
-//    private IntegerMathCPUBenchmark intBench;
-//    private FloatingPointMathCPUBenchmark floatBench;
-//    private PiDigitsCPUBenchmark piBench;
-//    private NetworkBenchmark networkSpeedBench;
-//    private HashingBenchmark hashingBench;
-//    private ConsoleLogger logger = new ConsoleLogger();
+    private TextView benchNameTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_benchmark);
-        result = (TextView) findViewById(R.id.cpubenchresult);
+        benchDescriptionTV = (TextView) findViewById(R.id.benchDescriptionTV);
+        benchNameTV = (TextView) findViewById(R.id.benchNameTV);
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
         progressBar.setVisibility(View.GONE);
 
         Intent intent = getIntent();
         benchName = intent.getStringExtra(BENCH_NAME);
         try {
-            Log.d("Debug: ",benchName);
-            benchmark = (IBenchmark) Class.forName("benchmark."+benchName.toLowerCase()+"."+benchName).getConstructor().newInstance();
+            Log.d("Debug: ", benchName);
+            benchmark = (IBenchmark) Class.forName("benchmark." + benchName.toLowerCase() + "." + benchName).getConstructor().newInstance();
             benchmark.initialize();
-            result.setText(benchmark.getInfo());
+            benchDescriptionTV.setText(benchmark.getInfo());
+            benchNameTV.setText(benchName);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {
@@ -63,70 +59,20 @@ public class BenchmarkActivity extends BaseActivity {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
-
-
-//        intBench = new IntegerMathCPUBenchmark();
-//        floatBench = new FloatingPointMathCPUBenchmark();
-//        piBench = new PiDigitsCPUBenchmark();
-//        networkSpeedBench = new NetworkBenchmark();
-//        hashingBench = new HashingBenchmark();
-//
-//        hashingBench.initialize(100L);
-//        networkSpeedBench.initialize(1024 * 1024 * 128L);
-//        intBench.initialize(1000000000L);
-//        floatBench.initialize(1000000000L);
-//        piBench.initialize(10000L);
-
-
     }
 
     /**
      * Run benchmarks and measure the time.
      */
     public void startBenchmark(View view) {
-        final TextView result = (TextView) findViewById(R.id.cpubenchresult);
-        final Timer timer = new Timer();
+        final TextView benchDescriptionFinalTV = (TextView) findViewById(R.id.benchDescriptionTV);
         progressBar.setVisibility(View.VISIBLE);
-        result.append("\n\nRunning!");
+        benchDescriptionFinalTV.append("\n\nRunning!");
 
-        /*
-        intBench.warmup();
-        timer.start();
-        intBench.run();
-        Long intBenchResult = timer.stop();
-        result.setText("int: " + myTimeUnit.convertTime(intBenchResult, myTimeUnit.MilliSecond));
 
-        floatBench.warmup();
-        timer.start();
-        floatBench.run();
-        Long floatBenchResult = timer.stop();
-        result.append("\nfloat: " + myTimeUnit.convertTime(floatBenchResult, myTimeUnit.MilliSecond));
-
-        piBench.warmup();
-        timer.start();
-        piBench.run();
-        Long piBenchResult = timer.stop();
-
-        logger.write(piBench.getPi().toString());
-        result.append("\nPI: " + myTimeUnit.convertTime(piBenchResult, myTimeUnit.MilliSecond));
-        */
-        /*
-        new AsyncTask<Void, Void, Double>() {
-            protected Double doInBackground(Void... params) {
-                networkSpeedBench.run();
-                return networkSpeedBench.getResult();
-            }
-
-            protected void onPostExecute(Double mbs) {
-                result.append("Network: " + String.format(java.util.Locale.US,"%.3f", mbs));
-            }
-        }.execute();
-        */
         new AsyncTask<Void, Void, Score>() {
             protected Score doInBackground(Void... params) {
-//                logger.write("Benchmark is starting...");
                 benchmark.run();
-                benchmark.clean();
                 return benchmark.getScore();
             }
 
@@ -139,9 +85,14 @@ public class BenchmarkActivity extends BaseActivity {
                 result.setText(Double.longBitsToDouble(time)+"  MB/s");
                 Database.postBenchScore(new Score(benchName, String.valueOf(Double.longBitsToDouble(time)),""));
                 Score s = Database.getBenchScore(benchName);
+                benchDescriptionFinalTV.setText("Uploading your results to the cloud.\nPlease wait...");
+                Database.postBenchScore(benchmark.getScore());
                 progressBar.setVisibility(View.GONE);
+                Intent scoreActivityIntent = new Intent(getApplicationContext(), ScoreActivity.class);
+                scoreActivityIntent.putExtra(BENCH_NAME, benchName);
+                startActivity(scoreActivityIntent);
             }
-            */
+
         }.execute();
     }
 

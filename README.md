@@ -1,2 +1,2 @@
 # AndroidBenchmark
-Computer Organisation Android Benchmark Project
+Computer Organization Android Benchmark Project

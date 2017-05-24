@@ -85,7 +85,7 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
     @Override
     public Score getScore() {
         return new Score(
-                Benchmarks.IntegerBenchmark.toString(),
+                "IntegerBenchmark",
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
                 this.extra
         );

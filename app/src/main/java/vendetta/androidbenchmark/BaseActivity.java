@@ -44,9 +44,9 @@ public class BaseActivity extends AppCompatActivity
         TextView manufacturerTextView = (TextView) header.findViewById(R.id.manufacturertxtview);
         TextView modelTextView = (TextView) header.findViewById(R.id.modeltxtview);
         Log.d("Manufacturer: ", DeviceInfo.getManufacturer());
-        Log.d("Model: ",DeviceInfo.getModel());
-        manufacturerTextView.setText("Manufacturer: " +DeviceInfo.getManufacturer());
-        modelTextView.setText("Model: " +DeviceInfo.getModel());
+        Log.d("Model: ", DeviceInfo.getModel());
+        manufacturerTextView.setText("Manufacturer: " + DeviceInfo.getManufacturer());
+        modelTextView.setText("Model: " + DeviceInfo.getModel());
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -103,13 +103,9 @@ public class BaseActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
             return true; //TODO go to info screen
         }
 
@@ -121,7 +117,7 @@ public class BaseActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Intent benchActivityIntent = new Intent(getApplicationContext(),BenchmarkActivity.class);
+        Intent benchActivityIntent = new Intent(getApplicationContext(), BenchmarkActivity.class);
 
         if (id == R.id.nav_cpubench) {
             benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.CPUBenchmark.toString());
@@ -131,10 +127,11 @@ public class BaseActivity extends AppCompatActivity
             benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.HDDBenchmark.toString());
         } else if (id == R.id.nav_netbench) {
             benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.NetworkBenchmark.toString());
-        } else if (id == R.id.nav_share) {
-            benchActivityIntent = new Intent(getApplicationContext(),BenchmarkActivity.class);
-        } else if (id == R.id.nav_leaderboard) { //TODO update share and leaderboard to launch other activities
-            benchActivityIntent = new Intent(getApplicationContext(),BenchmarkActivity.class);
+        } else if (id == R.id.nav_rankings) {
+            benchActivityIntent = new Intent(getApplicationContext(), MainActivity.class);
+            benchActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        } else if (id == R.id.nav_benchmark) { //TODO update nav_benchmark to launch full benchmark suite
+            benchActivityIntent = new Intent(getApplicationContext(), BenchmarkActivity.class);
         }
 
         startActivity(benchActivityIntent);

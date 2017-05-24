@@ -76,11 +76,11 @@ public class HashingBenchmark implements IBenchmark {
         final ExecutorService threadPool = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
         this.shouldTestRun = true;
         Random rnd = new Random(RND_SEED);
-        final List<Future<String>> results = new ArrayList<>((int)this.size);
+        final List<Future<String>> results = new ArrayList<>((int) this.size);
         for (int i = 0; i < this.size && this.shouldTestRun; ++i) {
             Collections.shuffle(alphabet, rnd);
             StringBuilder passwordBuilder = new StringBuilder(alphabet.size());
-            for(Character chr: alphabet) {
+            for (Character chr : alphabet) {
                 passwordBuilder.append(chr);
             }
             logger.write(passwordBuilder.toString());
@@ -103,7 +103,8 @@ public class HashingBenchmark implements IBenchmark {
     }
 
     @Override
-    public void clean() {}
+    public void clean() {
+    }
 
     @Override
     public Score getScore() {
@@ -126,13 +127,13 @@ public class HashingBenchmark implements IBenchmark {
         }
     }
 
-    public String getInfo(){
+    public String getInfo() {
         return
-        "\t\tHashing Benchmark:\nHashes passwords using the BCrypt algorithm.";
+                "Hashes passwords using the BCrypt algorithm.";
     }
 
     @Override
-    public Object getResult(){
+    public Object getResult() {
         return new Object();
     }
 }

@@ -160,7 +160,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     @Override
     public Score getScore() {
         return new Score(
-                Benchmarks.PIBenchmark.toString(),
+                "PIBenchmark",
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
                 this.extra);
     }

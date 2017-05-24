@@ -1,5 +1,7 @@
 package database;
 
+import java.util.HashMap;
+
 import info.DeviceInfo;
 
 /**
@@ -53,6 +55,11 @@ public class Score {
         this.uid = uid;
     }
 
+    public HashMap<String,Object> toMap(){
+        HashMap<String,Object> ret= new HashMap<>();
+        ret.put(benchName,result);
+        return ret;
+    }
     public String toString(){
         return benchName+" "+uid+" "+result+" "+device+" "+extra;
     }

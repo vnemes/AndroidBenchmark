@@ -5,12 +5,12 @@ package benchmark;
  */
 
 public enum Benchmarks {
-    FloatingPointBenchmark,
-    IntegerBenchmark,
-    PIBenchmark,
+    //FloatingPointBenchmark,
+    //IntegerBenchmark,
+    //PIBenchmark,
     CPUBenchmark,
     HashingBenchmark,
     NetworkBenchmark,
-    HDDBenchmark,
-    GPUBenchmark;
+    //GPUBenchmark,
+    HDDBenchmark;
 }
