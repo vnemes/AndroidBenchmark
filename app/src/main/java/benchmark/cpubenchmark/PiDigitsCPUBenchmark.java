@@ -22,7 +22,7 @@ import java.util.concurrent.Future;
 /**
  * stresses the CPU by computing digits of PI, in a parallel manner.
  * The algorithms is based on the Bailey–Borwein–Plouffe formula.
- * The sum is split into 8 chunks, each being processed by a separate thread.
+ * The sum is split into 4 chunks, each being processed by a separate thread.
  */
 public class PiDigitsCPUBenchmark implements IBenchmark {
     private static final int THREAD_POOL_SIZE = 4;     // Number of threads.
