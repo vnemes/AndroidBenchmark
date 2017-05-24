@@ -28,7 +28,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     private static final int THREAD_POOL_SIZE = 4;     // Number of threads.
     private static final int TOTAL_ITERATIONS = 5000; // More iterations results in better accuracy.
 
-    private boolean shouldTestRun;
+    private volatile boolean shouldTestRun;
     private long result;
     private BigDecimal piResult = new BigDecimal(0);
     private int scale = 5000; // The scale should usually be equal to TOTAL_ITERATIONS

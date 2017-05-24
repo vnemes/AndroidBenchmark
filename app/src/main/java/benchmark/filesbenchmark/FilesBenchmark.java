@@ -25,6 +25,7 @@ public class FilesBenchmark implements IBenchmark {
     private long result;
     private String extra;
     private File file;
+    private volatile boolean shouldTestRun;
 
     @Override
     public void initialize() {
@@ -56,7 +57,8 @@ public class FilesBenchmark implements IBenchmark {
 
     @Override
     public void stop() {
-
+        this.shouldTestRun = false;
+        this.compute();
     }
 
     @Override
@@ -82,6 +84,7 @@ public class FilesBenchmark implements IBenchmark {
 
     @Override
     public void compute() {
+        this.shouldTestRun = true;
         logger.write("Stream write benchmark");
         BufferedOutputStream outputStream = null;
         try {
@@ -94,7 +97,7 @@ public class FilesBenchmark implements IBenchmark {
         byte[] buffer = new byte[BUFFER_SIZE];
         Random rand = new Random();
         timer.start();
-        for (int i = 0; i < FILE_SIZE; i += BUFFER_SIZE) {
+        for (int i = 0; i < FILE_SIZE && this.shouldTestRun; i += BUFFER_SIZE) {
             rand.nextBytes(buffer);
             logger.write("ok");
             try {
@@ -105,5 +108,6 @@ public class FilesBenchmark implements IBenchmark {
             }
         }
         this.result = timer.stop();
+        this.shouldTestRun = false;
     }
 }
