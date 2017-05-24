@@ -1,11 +1,11 @@
 # AndroidBenchmark
 
-## Android Activities
+## Activities
 
 *BaseActivity* is the superclass that all other activities extend.
 The class handles basic UI tasks such as inflating the drawer and header Views and setting the respectve onItemSelected and *onClickListeners* listeners.
 
-The Drawer on the left contains the benchmarks that can be ran by the user, and by tapping one of them, an Intent is generated towards the *BenchmarkActivity*, with the payload as a value from the enum Benchmarks.
+The *Drawer* on the left contains the benchmarks that can be ran by the user, and by tapping one of them, an Intent is generated towards the *BenchmarkActivity*, with the payload as a value from the enum Benchmarks.
 
 *MainActivty* is the Activity the user is presented first. It contains a list of available benchmarks which, when tapped, launch the respective benchmark. The list is synced with the values in the Database.
 
@@ -23,4 +23,5 @@ The *benchmark.run()* method is ran inside an asynchronous task, which on comple
 
 When first logging into the application, the device will be assigned an unique id used for anonymously auhenticating it in the Firebase System. By using that id the Application can query the *Firebase Database* by taking SnapShots at certain locations where dataChangeListeners are triggered.
 Using these SnapShots, the application retrieves the scores of an user for a particular benchmark, all its scores, or all the scores of all the users on a particular benchmark. 
+
 Data is posted in two locations in the Firebase Database, one is the path which is only accessible by the user, and the other one where all users post their scores for a particular benchmark.
