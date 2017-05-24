@@ -137,5 +137,9 @@ public class Database {
 
     }
 
+    public static Context getContext(){
+        return mainActivityContext;
+    }
+
 
 }
