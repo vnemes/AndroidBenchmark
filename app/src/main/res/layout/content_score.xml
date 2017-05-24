@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:textColor="@color/colorAccent"
-        android:text="9001"
+        android:text="Computing.."
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 

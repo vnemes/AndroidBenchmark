@@ -110,7 +110,7 @@ public class HashingBenchmark implements IBenchmark {
     public Score getScore() {
         return new Score(
                 Benchmarks.HashingBenchmark.toString(),
-                Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
+                Long.toString((long)(100000000.0/myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond))),
                 this.extra);
     }
 
