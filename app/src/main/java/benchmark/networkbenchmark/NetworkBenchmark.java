@@ -30,7 +30,7 @@ public class NetworkBenchmark implements IBenchmark {
     private double result = 0; // MB/SECOND
     private String extra;
     private ConsoleLogger logger = new ConsoleLogger();
-    private boolean shouldTestRun;
+    private volatile boolean shouldTestRun;
 
     @Override
     public void initialize() {
