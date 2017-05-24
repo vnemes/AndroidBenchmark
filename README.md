@@ -12,10 +12,9 @@ When first created, it will extract the payload from the intent, and by using ja
 <br>The *Button* on the lower screen launches a *Benchmark Suite*, a benchmark that will iterate though all availible benchmarks and run them.
 <br>The *Drawer* on the left contains the benchmarks that can be ran by the user, and by tapping one of them, an Intent is generated towards the *BenchmarkActivity*, with the payload as a value from the *enum Benchmarks*.
 General information about the benchmark are presented in the field above the *Run button*, which, when pressed starts the benchmark and shows a spinner for its entire duration.
+<br>The *benchmark.run()* method is ran inside an asynchronous task, which on completition launches the *ScoreActivity*.
 
 + *ScoreActivity* is the Activity that displays the user the score achieved after running the benchmark, metrics about the benchmark and a leaderboard of devices and their respective scores from the Database.
-
-The *benchmark.run()* method is ran inside an asynchronous task, which on completition launches the *ScoreActivity*.
 
 ## Firebase Authentification and Database
 
