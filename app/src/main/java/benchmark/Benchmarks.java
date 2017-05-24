@@ -1,5 +1,7 @@
 package benchmark;
 
+import benchmark.benchmarksuite.BenchmarkSuite;
+
 /**
  * Created by Vendetta on 20-May-17.
  */
@@ -9,6 +11,7 @@ public enum Benchmarks {
     CPUBenchmark,
     HashingBenchmark,
     NetworkBenchmark,
-    HDDBenchmark,
-    BenchmarkSuite,
+    //GPUBenchmark,
+    FilesBenchmark,
+    BenchmarkSuite
 }

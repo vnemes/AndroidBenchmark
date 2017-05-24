@@ -109,6 +109,5 @@ public class BenchmarkActivity extends BaseActivity {
                 });
         AlertDialog alert = builder.create();
         alert.show();
-
     }
 }
