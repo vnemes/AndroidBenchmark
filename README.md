@@ -2,17 +2,17 @@
 
 ## Activities
 
-*BaseActivity* is the superclass that all other activities extend.
++ *BaseActivity* is the superclass that all other activities extend.
 The class handles basic UI tasks such as inflating the drawer and header Views and setting the respectve onItemSelected and *onClickListeners* listeners.
 
-The *Drawer* on the left contains the benchmarks that can be ran by the user, and by tapping one of them, an Intent is generated towards the *BenchmarkActivity*, with the payload as a value from the enum Benchmarks.
++ The *Drawer* on the left contains the benchmarks that can be ran by the user, and by tapping one of them, an Intent is generated towards the *BenchmarkActivity*, with the payload as a value from the enum Benchmarks.
 
-*MainActivty* is the Activity the user is presented first. It contains a list of available benchmarks which, when tapped, launch the respective benchmark. The list is synced with the values in the Database.
++ *MainActivty* is the Activity the user is presented first. It contains a list of available benchmarks which, when tapped, launch the respective benchmark. The list is synced with the values in the Database.
 
-The button on the lower screen launches a "Benchmark Suite", a benchmark that will iterate though all availible benchmarks and run them.
-
-*BenchmarkActivity* is the Activity that runs any benchmark.
++ *BenchmarkActivity* is the Activity that runs any benchmark.
 When first created, it will extract the payload from the intent, and by using java reflection it will dynamically instantiate an Object of type IBenchmark, depending on the payload value.
+
+The button on the lower screen launches a *Benchmark Suite*, a benchmark that will iterate though all availible benchmarks and run them.
 
 General information about the benchmark are presented in the field above the *Run button*, which, when pressed starts the benchmark and shows a spinner for its entire duration.
 
