@@ -50,7 +50,6 @@ public class ScoreActivity extends BaseActivity {
     public static void updateResult(Score score) {
         scoreTv.setText(score.getResult());
         extraTV.setText(score.getExtra());
-        progressBar.setVisibility(View.GONE);
     }
 
     public static void updateRanking(HashMap<String, String> scores, Context context) {
@@ -72,9 +71,10 @@ public class ScoreActivity extends BaseActivity {
             LinearLayout currentLayout = new LinearLayout(context);
             currentLayout.setOrientation(LinearLayout.HORIZONTAL);
             if (isDifferent) currentLayout.setBackgroundColor(Color.parseColor("#e8eaf6"));
-            else currentLayout.setBackgroundColor(Color.parseColor("#9fabf2"));
+            else currentLayout.setBackgroundColor(Color.parseColor("#a9b4f2"));
             if (entry.getKey().startsWith("Your device"))
                 currentLayout.setBackgroundColor(Color.parseColor("#ff93a9"));
+            currentLayout.setPadding(5,5,5,0);
             isDifferent = !isDifferent;
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             currentLayout.setLayoutParams(lp);
@@ -97,5 +97,6 @@ public class ScoreActivity extends BaseActivity {
             currentLayout.addView(ScoreValTView);
             rankingsContainer.addView(currentLayout);
         }
+        progressBar.setVisibility(View.GONE);
     }
 }

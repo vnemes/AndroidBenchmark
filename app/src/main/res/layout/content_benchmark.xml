@@ -1,5 +1,4 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,23 +24,37 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_height="wrap_content"
-        android:text="CPUBENCH is working!"
-        android:id="@+id/cpubenchresult"
+        android:text="Small description of the benchmark being run.\nMultiline."
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:id="@+id/benchDescriptionTV"
         android:lines="5"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/benchNameTV"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="126dp" />
+        android:layout_marginTop="44dp" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
-        android:layout_above="@+id/cpubenchstart"
+        android:layout_marginBottom="96dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/benchNameTV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="BenchmarkName"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/cpubenchstart"
+        android:layout_marginTop="132dp" />
 
 
 </RelativeLayout>

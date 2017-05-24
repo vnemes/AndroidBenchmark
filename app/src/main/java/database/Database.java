@@ -13,10 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
 
 import vendetta.androidbenchmark.MainActivity;
 import vendetta.androidbenchmark.ScoreActivity;
@@ -26,13 +23,11 @@ import vendetta.androidbenchmark.ScoreActivity;
  */
 
 public class Database {
-    public ProgressDialog mProgressDialog;
-    private static final String TAG = "DB ";
+    private static final String TAG = "Database";
     private static String uid = null;
     protected static FirebaseAuth mAuth = null;
     private static FirebaseDatabase database = null;
     private static DatabaseReference databaseUserScoreRef;
-    private static ValueEventListener databaseListener;
     private static FirebaseAuth.AuthStateListener mAuthListener;
     private static UserScores dbUserScores = new UserScores(true);
     private static Context mainActivityContext;
@@ -42,11 +37,13 @@ public class Database {
     public static void establishConnection(Context context) {
         if (mAuth == null) {
             initialize(context);
+        } else {
+            mainActivityContext = context;
+            updateUserScores();
         }
     }
 
     private static void initialize(Context context) {
-        //initialize thingies here.
         mainActivityContext = context;
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -64,26 +61,7 @@ public class Database {
                         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
                         database = FirebaseDatabase.getInstance();
                     }
-                    databaseUserScoreRef = database.getReference().child("users").child(uid);
-                    databaseListener = databaseUserScoreRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            // This method is called once with the initial value and again
-                            // whenever data at this location is updated.
-
-                            dbUserScores.updateAll((HashMap<String, String>) dataSnapshot.getValue());
-//                            UserScores dbUserScoresData = dataSnapshot.getValue(UserScores.class);
-//                            if (dbUserScoresData != null)
-//                                dbUserScores.updateAll(dbUserScoresData);
-                            MainActivity.updateScores(dbUserScores, mainActivityContext);
-                            Log.d(TAG, "UserScores read from DB");
-                        }
-
-                        @Override
-                        public void onCancelled(DatabaseError error) {
-                            Log.w(TAG, "Failed to read value.", error.toException());
-                        }
-                    });
+                    updateUserScores();
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + uid);
                 } else {
                     Log.d(TAG, "onAuthStateChanged:signed_out");
@@ -92,6 +70,23 @@ public class Database {
             }
         };
         mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    private static void updateUserScores() {
+        databaseUserScoreRef = database.getReference().child("users").child(uid);
+        databaseUserScoreRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                dbUserScores.updateAll((HashMap<String, String>) dataSnapshot.getValue());
+                MainActivity.updateScores(dbUserScores, mainActivityContext);
+                Log.d(TAG, "UserScores read from DB");
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
     }
 
     public static void postBenchScore(Score score) {

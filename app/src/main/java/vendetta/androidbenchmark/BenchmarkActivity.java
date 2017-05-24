@@ -19,7 +19,6 @@ import java.lang.reflect.InvocationTargetException;
 import benchmark.IBenchmark;
 import database.Database;
 import database.Score;
-import log.myTimeUnit;
 import stopwatch.Timer;
 
 /**
@@ -27,25 +26,28 @@ import stopwatch.Timer;
  */
 public class BenchmarkActivity extends BaseActivity {
     private IBenchmark benchmark = null;
-    private TextView result;
+    private TextView benchDescriptionTV;
     private ProgressBar progressBar;
     private String benchName;
+    private TextView benchNameTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_benchmark);
-        result = (TextView) findViewById(R.id.cpubenchresult);
+        benchDescriptionTV = (TextView) findViewById(R.id.benchDescriptionTV);
+        benchNameTV = (TextView) findViewById(R.id.benchNameTV);
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
         progressBar.setVisibility(View.GONE);
 
         Intent intent = getIntent();
         benchName = intent.getStringExtra(BENCH_NAME);
         try {
-            Log.d("Debug: ",benchName);
-            benchmark = (IBenchmark) Class.forName("benchmark."+benchName.toLowerCase()+"."+benchName).getConstructor().newInstance();
+            Log.d("Debug: ", benchName);
+            benchmark = (IBenchmark) Class.forName("benchmark." + benchName.toLowerCase() + "." + benchName).getConstructor().newInstance();
             benchmark.initialize();
-            result.setText(benchmark.getInfo());
+            benchDescriptionTV.setText(benchmark.getInfo());
+            benchNameTV.setText(benchName);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {
@@ -63,10 +65,9 @@ public class BenchmarkActivity extends BaseActivity {
      * Run benchmarks and measure the time.
      */
     public void startBenchmark(View view) {
-        final TextView result = (TextView) findViewById(R.id.cpubenchresult);
-        final Timer timer = new Timer();
+        final TextView benchDescriptionFinalTV = (TextView) findViewById(R.id.benchDescriptionTV);
         progressBar.setVisibility(View.VISIBLE);
-        result.append("\n\nRunning!");
+        benchDescriptionFinalTV.append("\n\nRunning!");
 
 
         new AsyncTask<Void, Void, Score>() {
@@ -75,24 +76,12 @@ public class BenchmarkActivity extends BaseActivity {
                 return benchmark.getScore();
             }
 
-//        new AsyncTask<Void, Void, Score>() {
-//            protected Score doInBackground(Void... params) {
-////                logger.write("Benchmark is starting...");
-//                benchmark.run();
-//                benchmark.clean();
-//                return benchmark.getScore();
-//            }
-//
-//            protected void onPostExecute(Score score) {
-//                result.append("Hashing: " + score.getResult());
-//            }
-
             protected void onPostExecute(Score score) {
-                result.setText(benchmark.getScore().toString());
+                benchDescriptionFinalTV.setText("Uploading your results to the cloud.\nPlease wait...");
                 Database.postBenchScore(benchmark.getScore());
                 progressBar.setVisibility(View.GONE);
-                Intent scoreActivityIntent = new Intent(getApplicationContext(),ScoreActivity.class);
-                scoreActivityIntent.putExtra(BENCH_NAME,benchName);
+                Intent scoreActivityIntent = new Intent(getApplicationContext(), ScoreActivity.class);
+                scoreActivityIntent.putExtra(BENCH_NAME, benchName);
                 startActivity(scoreActivityIntent);
             }
 

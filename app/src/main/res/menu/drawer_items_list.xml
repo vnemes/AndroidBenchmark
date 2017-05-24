@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:title="Benchmarks">
         <item
             android:id="@+id/nav_cpubench"
             android:icon="@drawable/ic_menu_camera"
@@ -20,16 +21,16 @@
             android:title="Network Benchmark" />
     </group>
 
-    <item android:title="Online">
+    <item android:title="Leaderboards">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_rankings"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="View your results" />
             <item
-                android:id="@+id/nav_leaderboard"
+                android:id="@+id/nav_benchmark"
                 android:icon="@drawable/ic_menu_send"
-                android:title="View Leaderboards" />
+                android:title="Run Full Benchmark Suite" />
         </menu>
     </item>
 

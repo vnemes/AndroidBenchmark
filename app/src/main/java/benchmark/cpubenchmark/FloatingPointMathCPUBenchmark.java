@@ -87,7 +87,7 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
     @Override
     public Score getScore() {
         return new Score(
-                Benchmarks.FloatingPointBenchmark.toString(),
+                "FloatingPointBenchmark",
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
                 this.extra
         );

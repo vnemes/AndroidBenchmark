@@ -9,11 +9,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="50dp"
-        android:layout_marginTop="300dp"
-        android:id="@+id/resultScrollView">
+        android:id="@+id/resultScrollView"
+        android:layout_below="@+id/extraTV"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,9 +29,10 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="77dp"
         android:textColor="@color/colorPrimaryDark"
         android:text="Your score is:"
+        android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -43,31 +42,34 @@
         android:textSize="40sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/colorAccent"
         android:text="9001"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/extraTV"
-        android:maxLines="5"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="22dp"
+        android:lines="6"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Extra information here"
         android:layout_below="@+id/scoreTV"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="8dp"
-        android:text="Extra information here" />
+        android:layout_toStartOf="@+id/scoreTV"
+        android:layout_alignParentEnd="true" />
 
     <ProgressBar
         android:id="@+id/progressBar3"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/extraTV"
+        android:layout_alignTop="@+id/extraTV"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="73dp" />
+        android:layout_marginTop="39dp" />
 
 
 </RelativeLayout>
