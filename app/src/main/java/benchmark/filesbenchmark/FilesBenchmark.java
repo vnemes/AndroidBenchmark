@@ -7,6 +7,7 @@ import java.util.Random;
 
 import benchmark.Benchmarks;
 import benchmark.IBenchmark;
+import database.Database;
 import database.Score;
 import log.ConsoleLogger;
 import log.myTimeUnit;
@@ -18,19 +19,21 @@ import stopwatch.Timer;
 
 public class FilesBenchmark implements IBenchmark {
     private static final int BUFFER_SIZE = 1024 * 4; // KB
-    private static final int FILE_SIZE = 1024 * 1024 * 32; // MB
+    private static final int FILE_SIZE = 1024 * 1024 * 64; // MB
     private static String FILE_NAME = "benchmark.dat";
     private ConsoleLogger logger = new ConsoleLogger();
     private Timer timer = new Timer();
     private long result;
     private String extra;
+    private File dir;
     private File file;
     private volatile boolean shouldTestRun;
 
     @Override
     public void initialize() {
         result = 0;
-        file = new File(FILE_NAME);
+        dir = Database.getContext().getFilesDir();
+        file = new File(dir, FILE_NAME);
     }
 
     @Override
@@ -65,6 +68,7 @@ public class FilesBenchmark implements IBenchmark {
     public void clean() {
         if (file != null) {
             file.delete();
+            file = null;
         }
     }
 
