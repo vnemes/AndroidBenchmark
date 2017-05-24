@@ -13,8 +13,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 import vendetta.androidbenchmark.MainActivity;
 import vendetta.androidbenchmark.ScoreActivity;
@@ -34,6 +36,7 @@ public class Database {
     private static FirebaseAuth.AuthStateListener mAuthListener;
     private static UserScores dbUserScores = new UserScores(true);
     private static Context mainActivityContext;
+    private static HashMap<String, String> results;
 
 
     public static void establishConnection(Context context) {
@@ -52,7 +55,7 @@ public class Database {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     uid = user.getUid();
-                    Log.d(TAG, uid +"connected");
+                    Log.d(TAG, uid + "connected");
                 }
                 // User is signed in
                 if (uid != null) {
@@ -68,13 +71,14 @@ public class Database {
                             // This method is called once with the initial value and again
                             // whenever data at this location is updated.
 
-                            dbUserScores.updateAll((HashMap<String,String>) dataSnapshot.getValue());
+                            dbUserScores.updateAll((HashMap<String, String>) dataSnapshot.getValue());
 //                            UserScores dbUserScoresData = dataSnapshot.getValue(UserScores.class);
 //                            if (dbUserScoresData != null)
 //                                dbUserScores.updateAll(dbUserScoresData);
-                            MainActivity.updateScores(dbUserScores,mainActivityContext);
+                            MainActivity.updateScores(dbUserScores, mainActivityContext);
                             Log.d(TAG, "UserScores read from DB");
                         }
+
                         @Override
                         public void onCancelled(DatabaseError error) {
                             Log.w(TAG, "Failed to read value.", error.toException());
@@ -90,14 +94,14 @@ public class Database {
         mAuth.addAuthStateListener(mAuthListener);
     }
 
-    public static void postBenchScore(Score score){
+    public static void postBenchScore(Score score) {
         score.setUid(uid);
         database.getReference().child("benchmarks").child(score.getBenchName()).child(uid).setValue(score);
         databaseUserScoreRef.updateChildren(score.toMap());
-        Log.d("DB ","posted "+score.toString());
+        Log.d("DB ", "posted " + score.toString());
     }
 
-    public static void getBenchScore(String benchmarkName){
+    public static void getBenchScore(String benchmarkName) {
         database.getReference().child("benchmarks").child(benchmarkName).child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -107,16 +111,35 @@ public class Database {
 
             @Override
             public void onCancelled(DatabaseError error) {
-                Log.d(TAG, "Failed to read value.", error.toException());
+                Log.d(TAG, "Failed to read value at benchmarkScore.", error.toException());
             }
         });
     }
 
-    public static void getRankings(String benchmarName){
-        //TODO implement database query to get a sorted list of RankScore
-        //then call ScoreActivity.updateRanking(scoreList)
-    }
+    public static void getRankings(String benchmarkName, final Context rankContext) {
+        results = new HashMap<>();
+        database.getReference().child("benchmarks").child(benchmarkName).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot data : dataSnapshot.getChildren()) {
+                    Score tempScore = data.getValue(Score.class);
+                    if (results.get(tempScore.getDevice()) == null) {
+                        results.put(tempScore.getDevice(), tempScore.getResult());
+                    }
+                    if (results.get(tempScore.getDevice()).compareTo(tempScore.getResult()) < 0)
+                        results.put(tempScore.getDevice(), tempScore.getResult());
+                }
+                ScoreActivity.updateRanking(results, rankContext);
+                Log.d(TAG, "Rankings read from DB");
+            }
 
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.d(TAG, "Failed to read value at rankings.", error.toException());
+            }
+        });
+
+    }
 
 
 }
