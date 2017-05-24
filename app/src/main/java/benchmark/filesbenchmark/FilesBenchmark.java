@@ -103,7 +103,6 @@ public class FilesBenchmark implements IBenchmark {
         timer.start();
         for (int i = 0; i < FILE_SIZE && this.shouldTestRun; i += BUFFER_SIZE) {
             rand.nextBytes(buffer);
-            logger.write("ok");
             try {
                 outputStream.write(buffer);
             } catch (Exception e) {
