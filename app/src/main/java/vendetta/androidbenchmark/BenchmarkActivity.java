@@ -77,14 +77,6 @@ public class BenchmarkActivity extends BaseActivity {
             }
 
             protected void onPostExecute(Score score) {
-                result.append("Hashing: " + score.getResult());
-                progressBar.setVisibility(View.GONE);
-            }
-/*
-            protected void onPostExecute(Long time) {
-                result.setText(Double.longBitsToDouble(time)+"  MB/s");
-                Database.postBenchScore(new Score(benchName, String.valueOf(Double.longBitsToDouble(time)),""));
-                Score s = Database.getBenchScore(benchName);
                 benchDescriptionFinalTV.setText("Uploading your results to the cloud.\nPlease wait...");
                 Database.postBenchScore(benchmark.getScore());
                 progressBar.setVisibility(View.GONE);
@@ -115,6 +107,5 @@ public class BenchmarkActivity extends BaseActivity {
                 });
         AlertDialog alert = builder.create();
         alert.show();
-
     }
 }
