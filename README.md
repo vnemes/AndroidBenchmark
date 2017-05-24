@@ -9,7 +9,7 @@ The Drawer on the left contains the benchmarks that can be ran by the user, and 
 
 *MainActivty* is the Activity the user is presented first. It contains a list of available benchmarks which, when tapped, launch the respective benchmark. The list is synced with the values in the Database.
 
-The Button on the lower screen launches a "Benchmark Suite", a benchmark that will iterate though all availible benchmarks and run them.
+The button on the lower screen launches a "Benchmark Suite", a benchmark that will iterate though all availible benchmarks and run them.
 
 *BenchmarkActivity* is the Activity that runs any benchmark.
 When first created, it will extract the payload from the intent, and by using java reflection it will dynamically instantiate an Object of type IBenchmark, depending on the payload value.
