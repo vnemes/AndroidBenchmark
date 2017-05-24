@@ -11,7 +11,7 @@ import stopwatch.Timer;
 
 public class FloatingPointMathCPUBenchmark implements IBenchmark {
     private Long size = Long.MAX_VALUE;
-    private boolean shouldTestRun;
+    private volatile boolean shouldTestRun;
     private String extra;
     private long result;
 

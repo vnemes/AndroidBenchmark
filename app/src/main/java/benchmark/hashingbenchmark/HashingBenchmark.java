@@ -32,7 +32,7 @@ public class HashingBenchmark implements IBenchmark {
     private String extra;
     private final List<Character> alphabet = new ArrayList<>();
     private long size = 25L; // How many passwords to be hashed.
-    private boolean shouldTestRun;
+    private volatile boolean shouldTestRun;
 
     @Override
     public void initialize() {
