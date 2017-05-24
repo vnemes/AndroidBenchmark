@@ -32,8 +32,8 @@ This benchmark evaluates the performance of the CPU. It consists of 3 smaller be
 <br>*Digits of PI*: Puts caching and multithreading to the test by computing digits of PI, using the
 [Bailey–Borwein–Plouffe formula](https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula) in a parallel manner.
 + Hashing Benchmark
-<br>This benchmark computes hashes using the BCrypt Algorithm. The implementation of the BCrypt class was provided by Damien Miller.
+<br>This benchmark computes hashes using the BCrypt Algorithm. [The implementation](http://www.mindrot.org/projects/jBCrypt/) of the BCrypt class was provided by Damien Miller.
 + Network Benchmark
 <br>Measures download speed by downloading part of a large file from <http://www.engineerhammad.com>.
 + Files Benchmark
-<br>Writes a 64 MB file using a fixed 3 KB buffer and measures writing the speed.
+<br>Evaluates the read/write performance of the device using a fixed 4kb buffer, writing 16 files of 64mb each.
