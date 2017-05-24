@@ -29,9 +29,9 @@
         android:layout_marginRight="15dp"
         android:layout_height="wrap_content"
         android:text="Small description of the benchmark being run.\nMultiline."
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:id="@+id/benchDescriptionTV"
-        android:lines="5"
+        android:lines="7"
         android:layout_below="@+id/benchNameTV"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp" />

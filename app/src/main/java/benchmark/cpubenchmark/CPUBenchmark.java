@@ -1,5 +1,7 @@
 package benchmark.cpubenchmark;
 
+import android.util.Log;
+
 import benchmark.Benchmarks;
 import benchmark.IBenchmark;
 import database.Score;
@@ -39,10 +41,13 @@ public class CPUBenchmark implements IBenchmark {
 
     @Override
     public void run() {
+        Log.d("CPUBench","Starting IntegerBenchmark");
         intBench.run();
+        Log.d("CPUBench","Starting FloatBenchmark");
         floatBench.run();
+        Log.d("CPUBench","Starting PIBenchmark");
         piBench.run();
-
+        Log.d("CPUBench","All benchmarks finished");
     }
 
     @Override

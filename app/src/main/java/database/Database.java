@@ -78,7 +78,7 @@ public class Database {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 HashMap<String, String> tmp = (HashMap<String, String>) dataSnapshot.getValue();
                 if (tmp != null)
-                    dbUserScores.updateAll((HashMap<String, String>) dataSnapshot.getValue());
+                    dbUserScores.updateAll(tmp);
                 MainActivity.updateScores(dbUserScores, mainActivityContext);
                 Log.d(TAG, "UserScores read from DB");
             }

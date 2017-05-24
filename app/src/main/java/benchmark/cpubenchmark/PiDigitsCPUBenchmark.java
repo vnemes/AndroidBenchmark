@@ -27,17 +27,18 @@ import java.util.concurrent.Future;
  */
 public class PiDigitsCPUBenchmark implements IBenchmark {
     private static final int THREAD_POOL_SIZE = 4;     // Number of threads.
-    private static final int TOTAL_ITERATIONS = 10000; // More iterations results in better accuracy.
+    private static final int TOTAL_ITERATIONS = 5000; // More iterations results in better accuracy.
 
     private boolean shouldTestRun;
     private String extra;
     private long result;
     private BigDecimal piResult = new BigDecimal(0);
-    private int scale = 1000; // The scale should usually be equal to TOTAL_ITERATIONS
+    private int scale = 5000; // The scale should usually be equal to TOTAL_ITERATIONS
+    private ArrayList<Future<BigDecimal>> chunksResult;
 
     @Override
     public void initialize() {
-        this.scale = 10000;
+        this.scale = 5000;
         this.result = 0;
     }
 
@@ -55,7 +56,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     public void warmup(){
         int prevScale = this.scale;
         this.scale = 100;
-        this.run();
+        this.compute();
         this.scale = prevScale;
     }
 
@@ -79,7 +80,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
         MathContext context = new MathContext(this.scale);
         final ExecutorService threadPool = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
         final int chunkSize = TOTAL_ITERATIONS / THREAD_POOL_SIZE;
-        ArrayList<Future<BigDecimal>> chunksResult = new ArrayList<>();
+        chunksResult = new ArrayList<>();
 
         for (int chunkStart = 0; chunkStart < TOTAL_ITERATIONS; chunkStart += chunkSize) {
             chunksResult.add(threadPool.submit(new ComputeChunk(chunkStart, Math.min(chunkStart + chunkSize, TOTAL_ITERATIONS), context)));
@@ -103,6 +104,9 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
     @Override
     public void stop() {
         this.shouldTestRun = false;
+        for (Future<BigDecimal> result : chunksResult) {
+            result.cancel(true);
+        }
     }
 
     @Override
@@ -154,7 +158,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
 
     @Override
     public String getInfo(){
-        return "";
+        return "PIBenchmark: Computes digits of PI in a parallel manner. Algorithm based on the Bailey–Borwein–Plouffe formula.";
     }
 
     @Override
@@ -162,7 +166,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
         return new Score(
                 "PIBenchmark",
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
-                this.extra);
+                "Computed "+ scale+" digits of PI in "+ Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.Second))+" seconds");
     }
 
     public Object getResult(){
