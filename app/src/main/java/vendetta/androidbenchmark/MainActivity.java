@@ -70,8 +70,14 @@ public class MainActivity extends BaseActivity {
     }
 
     public void startFullBenchmark(View v) {
-        //TODO launh full benchmark suite here
-        Log.d("debug", "should start the benchmark suite");
+        Intent benchActivityIntent = new Intent(v.getContext(), BenchmarkActivity.class);
+        benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.BenchmarkSuite.toString());
+        v.getContext().startActivity(benchActivityIntent);
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 
 }
