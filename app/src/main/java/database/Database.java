@@ -76,7 +76,9 @@ public class Database {
         databaseUserScoreRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                dbUserScores.updateAll((HashMap<String, String>) dataSnapshot.getValue());
+                HashMap<String, String> tmp = (HashMap<String, String>) dataSnapshot.getValue();
+                if (tmp != null)
+                    dbUserScores.updateAll((HashMap<String, String>) dataSnapshot.getValue());
                 MainActivity.updateScores(dbUserScores, mainActivityContext);
                 Log.d(TAG, "UserScores read from DB");
             }
