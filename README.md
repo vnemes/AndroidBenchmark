@@ -14,10 +14,10 @@ The Button on the lower screen launches a "Benchmark Suite", a benchmark that wi
 *BenchmarkActivity* is the Activity that runs any benchmark.
 When first created, it will extract the payload from the intent, and by using java reflection it will dynamically instantiate an Object of type IBenchmark, depending on the payload value.
 
-General information about the benchmark are presented in the field above the Run button, which, when pressed starts the benchmark and shows a spinner for its entire duration
+General information about the benchmark are presented in the field above the *Run button*, which, when pressed starts the benchmark and shows a spinner for its entire duration.
 
-The *benchmark.run()* method is ran inside an asynchronous task, which on completition launches the ScoreActivity
-ScoreActivity is the Activity that displays the user the Score achieved by running the benchmark, metrics about the benchmark that was run and a leaderboard of devices and their respective scores from the Database
+The *benchmark.run()* method is ran inside an asynchronous task, which on completition launches the *ScoreActivity*.
+*ScoreActivity* is the Activity that displays the user the score achieved after running the benchmark, metrics about the benchmark and a leaderboard of devices and their respective scores from the Database.
 
 ## Firebase Authentification and Database
 
