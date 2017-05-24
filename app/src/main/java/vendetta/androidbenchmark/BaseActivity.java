@@ -124,7 +124,7 @@ public class BaseActivity extends AppCompatActivity
         } else if (id == R.id.nav_hashbench) {
             benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.HashingBenchmark.toString());
         } else if (id == R.id.nav_filebench) {
-            benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.HDDBenchmark.toString());
+            benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.FilesBenchmark.toString());
         } else if (id == R.id.nav_netbench) {
             benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.NetworkBenchmark.toString());
         } else if (id == R.id.nav_rankings) {

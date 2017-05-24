@@ -12,5 +12,5 @@ public enum Benchmarks {
     HashingBenchmark,
     NetworkBenchmark,
     //GPUBenchmark,
-    HDDBenchmark;
+    FilesBenchmark;
 }
