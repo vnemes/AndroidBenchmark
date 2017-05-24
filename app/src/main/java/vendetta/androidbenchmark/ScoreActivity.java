@@ -60,8 +60,7 @@ public class ScoreActivity extends BaseActivity {
                 new Comparator<Map.Entry<String, String>>() {
                     @Override
                     public int compare(Map.Entry<String, String> e1, Map.Entry<String, String> e2) {
-                        int res = e1.getValue().compareTo(e2.getValue());
-                        return res != 0 ? res : 1; // Special fix to preserve items with equal values
+                        return Double.parseDouble(e1.getValue()) < (Double.parseDouble(e2.getValue())) ? 1 : -1;
                     }
                 }
         );

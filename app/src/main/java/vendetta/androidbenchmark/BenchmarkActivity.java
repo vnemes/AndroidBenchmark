@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -67,7 +68,8 @@ public class BenchmarkActivity extends BaseActivity {
     public void startBenchmark(View view) {
         final TextView benchDescriptionFinalTV = (TextView) findViewById(R.id.benchDescriptionTV);
         progressBar.setVisibility(View.VISIBLE);
-        benchDescriptionFinalTV.append("\n\nRunning!");
+        benchDescriptionFinalTV.append("\nRunning!");
+        Toast.makeText(this,benchName+" started",Toast.LENGTH_LONG).show();
 
 
         new AsyncTask<Void, Void, Score>() {

@@ -33,7 +33,7 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
         Long prevSize = this.size;
         this.size = 1000L;
         for (int i=1; i<=3; i*=10){
-            run();
+            compute();
             this.size *= 10;
         }
         this.size = prevSize;
