@@ -18,7 +18,7 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
 
     @Override
     public void initialize(){
-        this.size = 1000000000L;
+        this.size = 20000000L;
         this.result = 0;
     }
 
@@ -79,7 +79,7 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
 
     @Override
     public String getInfo(){
-        return "";
+        return "IntegerBenchmark: Performs various arithmetic operations on Integers";
     }
 
     @Override
@@ -87,7 +87,7 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
         return new Score(
                 "IntegerBenchmark",
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
-                this.extra
+                "Done 60 million integer arithmetic operations in "+myTimeUnit.convertTime(this.result, myTimeUnit.Second)+" seconds"
         );
     }
 

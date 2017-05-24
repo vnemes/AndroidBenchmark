@@ -18,7 +18,7 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
 
     @Override
     public void initialize() {
-        this.size = 1000000000L;
+        this.size = 20000000L;
         this.result = 0;
     }
 
@@ -81,7 +81,7 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
 
     @Override
     public String getInfo(){
-        return "";
+        return "IntegerBenchmark: Performs various arithmetic operations on Doubles";
     }
 
     @Override
@@ -89,7 +89,7 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
         return new Score(
                 "FloatingPointBenchmark",
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
-                this.extra
+                "Done 60 million floating point arithmetic operations in "+myTimeUnit.convertTime(this.result, myTimeUnit.Second)+" seconds"
         );
     }
 
