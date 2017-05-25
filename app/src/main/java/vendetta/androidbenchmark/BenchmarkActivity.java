@@ -99,7 +99,8 @@ public class BenchmarkActivity extends BaseActivity {
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        benchAsyncTask.cancel(true);
+                        if (benchAsyncTask != null)
+                            benchAsyncTask.cancel(true);
                         benchmark.stop();
                         benchmark.clean();
                         finish();

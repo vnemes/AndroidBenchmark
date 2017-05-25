@@ -72,7 +72,6 @@ public class FilesBenchmark implements IBenchmark {
     @Override
     public void stop() {
         this.shouldTestRun = false;
-        this.compute();
     }
 
     @Override
