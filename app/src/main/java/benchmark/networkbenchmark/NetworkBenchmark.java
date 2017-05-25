@@ -78,7 +78,7 @@ public class NetworkBenchmark implements IBenchmark {
             while (totalDownload < size && this.shouldTestRun) {
                 timer.start();
                 try {
-                    logger.write("Downloading....");
+                    //logger.write("Downloading....");
                     stream.readFully(buffer);
                 } catch (EOFException e) {
                     eof = true;
@@ -88,12 +88,12 @@ public class NetworkBenchmark implements IBenchmark {
                     break;
                 }
                 totalDownload += bufferSize;
-                logger.write("Download " + bufferSize + " " + (bufferSize / (1024 * 1024)));
+                //logger.write("Download " + bufferSize + " " + (bufferSize / (1024 * 1024)));
                 measurements.add((double)bufferSize / (1024 * 1024) / (measure / 1000000000.0));
             }
             double sum = 0;
             for (double each : measurements) {
-                logger.write("" + String.format(java.util.Locale.US,"%.6f", each));
+                //logger.write("" + String.format(java.util.Locale.US,"%.6f", each));
                 sum += each;
             }
             this.result = sum * 4 / measurements.size();
@@ -118,12 +118,12 @@ public class NetworkBenchmark implements IBenchmark {
     public Score getScore() {
         return new Score(
                 Benchmarks.NetworkBenchmark.toString(),
-                Long.toString((long)this.result * 1000),
-                this.extra);
+                Long.toString((long)(this.result * 1000)),
+                "Downloaded "+size/(1024*1024)+" MegaBytes with a speed of "+String.format(java.util.Locale.US,"%.3f",result)+" MB/s");
     }
 
     @Override
     public String getInfo(){
-        return "Network Speed Benchmark:\nMeasures download speed by downloading a large file from http://www.engineerhammad.com.";
+        return "Network Speed Benchmark:\nMeasures download speed by downloading a 64 MB file from http://www.engineerhammad.com.";
     }
 }

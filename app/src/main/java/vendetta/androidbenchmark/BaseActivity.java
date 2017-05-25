@@ -1,5 +1,7 @@
 package vendetta.androidbenchmark;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -107,7 +109,17 @@ public class BaseActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.action_about) {
-            return true; //TODO go to info screen
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("AndroidBenchmark v0.3-beta\n-All benchmarks working\n-Database services online\nGithub Link:\nhttps://github.com/vendettavn/AndroidBenchmark")
+                    .setCancelable(false)
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    });
+            AlertDialog alert = builder.create();
+            alert.show();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);

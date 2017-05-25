@@ -80,7 +80,7 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
 
     @Override
     public String getInfo(){
-        return "IntegerBenchmark: Performs various arithmetic operations on Doubles";
+        return "FloatingPointBenchmark: Performs various arithmetic operations on Doubles";
     }
 
     @Override

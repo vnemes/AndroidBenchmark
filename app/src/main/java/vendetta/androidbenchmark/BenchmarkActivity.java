@@ -81,7 +81,7 @@ public class BenchmarkActivity extends BaseActivity {
 
             protected void onPostExecute(Score score) {
                 benchDescriptionFinalTV.setText("Uploading your results to the cloud.\nPlease wait...");
-                Database.postBenchScore(benchmark.getScore());
+                Database.postBenchScore(score);
                 progressBar.setVisibility(View.GONE);
                 Intent scoreActivityIntent = new Intent(getApplicationContext(), ScoreActivity.class);
                 scoreActivityIntent.putExtra(BENCH_NAME, benchName);

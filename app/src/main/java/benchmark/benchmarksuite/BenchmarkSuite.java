@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import benchmark.Benchmarks;
 import benchmark.IBenchmark;
+import database.Database;
 import database.Score;
 
 /**
@@ -86,11 +87,13 @@ public class BenchmarkSuite implements IBenchmark {
         int cnt = 0;
         StringBuilder sb = new StringBuilder();
         for (IBenchmark benchmark : benchmarkArr) {
-            if (Double.parseDouble(benchmark.getScore().getResult()) != 0) {
-                result *= Double.parseDouble(benchmark.getScore().getResult());
+            Score current = benchmark.getScore();
+            Database.postBenchScore(current);
+            if (Double.parseDouble(current.getResult()) != 0) {
+                result *= Double.parseDouble(current.getResult());
                 cnt++;
             }
-            sb.append('\n'+benchmark.getScore().getBenchName()+": "+benchmark.getScore().getResult());
+            sb.append('\n'+current.getBenchName()+": "+current.getResult());
         }
         result = Math.pow(result, 1.0 / cnt);
         return new Score(Benchmarks.BenchmarkSuite.toString(),
