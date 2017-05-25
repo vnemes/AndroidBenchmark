@@ -118,7 +118,7 @@ public class NetworkBenchmark implements IBenchmark {
     public Score getScore() {
         return new Score(
                 Benchmarks.NetworkBenchmark.toString(),
-                String.format(java.util.Locale.US,"%.3f", this.result),
+                Long.toString((long)this.result * 1000),
                 this.extra);
     }
 

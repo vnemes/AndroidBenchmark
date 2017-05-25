@@ -75,9 +75,4 @@ public class MainActivity extends BaseActivity {
         v.getContext().startActivity(benchActivityIntent);
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
 }

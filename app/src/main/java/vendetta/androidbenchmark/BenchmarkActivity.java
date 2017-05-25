@@ -31,6 +31,7 @@ public class BenchmarkActivity extends BaseActivity {
     private ProgressBar progressBar;
     private String benchName;
     private TextView benchNameTV;
+    private AsyncTask benchAsyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +73,7 @@ public class BenchmarkActivity extends BaseActivity {
         Toast.makeText(this,benchName+" started",Toast.LENGTH_LONG).show();
 
 
-        new AsyncTask<Void, Void, Score>() {
+        benchAsyncTask = new AsyncTask<Void, Void, Score>() {
             protected Score doInBackground(Void... params) {
                 benchmark.run();
                 return benchmark.getScore();
@@ -98,9 +99,10 @@ public class BenchmarkActivity extends BaseActivity {
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        benchAsyncTask.cancel(true);
                         benchmark.stop();
                         benchmark.clean();
-                        BenchmarkActivity.super.onBackPressed();
+                        finish();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {

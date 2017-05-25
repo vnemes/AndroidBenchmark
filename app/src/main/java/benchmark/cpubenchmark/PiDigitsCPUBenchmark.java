@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
  */
 
 /**
- * stresses the CPU by computing digits of PI, in a parallel manner.
+ * Stresses the CPU by computing digits of PI, in a parallel manner.
  * The algorithms is based on the Bailey–Borwein–Plouffe formula.
  * The sum is split into 4 chunks, each being processed by a separate thread.
  */

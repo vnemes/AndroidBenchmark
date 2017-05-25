@@ -31,7 +31,7 @@ public class HashingBenchmark implements IBenchmark {
     private long result; // measured time
     private String extra;
     private final List<Character> alphabet = new ArrayList<>();
-    private long size = 25L; // How many passwords to be hashed.
+    private long size = 9001L; // How many passwords to be hashed.
     private volatile boolean shouldTestRun;
 
     @Override
@@ -52,7 +52,7 @@ public class HashingBenchmark implements IBenchmark {
     @Override
     public void warmup() {
         Long prevSize = this.size;
-        initialize(3L);
+        initialize(10L);
         compute();
         this.size = prevSize;
     }
@@ -83,16 +83,16 @@ public class HashingBenchmark implements IBenchmark {
             for (Character chr : alphabet) {
                 passwordBuilder.append(chr);
             }
-            logger.write(passwordBuilder.toString());
+            //logger.write(passwordBuilder.toString());
             results.add(threadPool.submit(new HashCalculator(passwordBuilder.toString())));
         }
-        for (Future<String> r : results) {
-            try {
-                logger.write("hash " + r.get());
-            } catch (Exception e) {
-                logger.write("Exception: " + e.toString());
-            }
-        }
+//        for (Future<String> r : results) {
+//            try {
+//                logger.write("hash " + r.get());
+//            } catch (Exception e) {
+//                logger.write("Exception: " + e.toString());
+//            }
+//        }
         this.shouldTestRun = false;
         threadPool.shutdownNow();
     }
@@ -111,7 +111,7 @@ public class HashingBenchmark implements IBenchmark {
         return new Score(
                 Benchmarks.HashingBenchmark.toString(),
                 Long.toString((long)(100000000.0/myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond))),
-                this.extra);
+                "Hashed "+size+" passwords in "+myTimeUnit.convertTime(this.result,myTimeUnit.MicroSecond.Second)+" seconds!" );
     }
 
     private class HashCalculator implements Callable<String> {
