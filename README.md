@@ -67,5 +67,4 @@ One interesting fact we have found our during our beta deployment is that the Go
 
 ## Conclusions
 
-We feel that while developing this project we have learn a lot of particularities of the Android Application Development process, Android & Firebase specific best practices, and last but not least a better understanding in the inner workings of how the complex system we carry in our pocket works and interacts with the environment, be it through sensors or the internet.
-
+We feel that while developing this project we have learned a lot about the particularities of the Android Application Development Process, Android & Firebase specific *Best Pactices*, and last but not least a better understanding of the inner workings on how the complex system we carry in our pocket works and interacts with the environment, be it through sensors or the Internet.
