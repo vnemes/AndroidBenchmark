@@ -42,6 +42,17 @@ The most interesting of its features is the *UX* metric, which assesses the *Use
 
 Both of these benchmarks have been tested on over 3000 devices and have over 100000 values in their datasets.
 
+### Comparison with AnTuTu
+
+| Features        | AndroidBenchmark  | Antutu |
+| :-------------: |:-----------------:| :-----:|
+| UX   | No | Yes |
+| CPU  | Yes | Yes |
+| RAM | No |  Yes |
+| Storage IO | Yes | Yes |
+| GPU | No | Yes |
+| Network | Yes | No |
+
 ## Usage: Activities
 
 + *BaseActivity* is the superclass that all other activities extend.
