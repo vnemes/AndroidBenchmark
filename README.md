@@ -44,7 +44,7 @@ Both of these benchmarks have been tested on over 3000 devices and have over 100
 
 ### Comparison with AnTuTu
 
-| Features        | AndroidBenchmark  | Antutu |
+| Features        | AndroidBenchmark  | AnTuTu |
 | :-------------: |:-----------------:| :-----:|
 | UX   | No | Yes |
 | CPU  | Yes | Yes |
