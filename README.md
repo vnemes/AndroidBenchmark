@@ -1,5 +1,32 @@
 # AndroidBenchmark
 
+## About the benchmarks
+
++ CPU Benchmark
+This benchmark evaluates the performance of the CPU. It consists of 3 smaller benchmarks:
+<br>*Integer arithmetic*: Stresses the ALU by doing lots of integer computations.
+<br>*Floating point*: Stresses the FPU by doing lots of floating point computations.
+<br>*Digits of PI*: Puts caching and multithreading to the test by computing digits of PI, using the
+[Bailey–Borwein–Plouffe formula](https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula) in a parallel manner.
++ Hashing Benchmark
+<br>This benchmark computes hashes using the BCrypt Algorithm. [The implementation](http://www.mindrot.org/projects/jBCrypt/) of the BCrypt class was provided by Damien Miller.
++ Network Benchmark
+<br>Measures download speed by downloading part of a large file from <http://www.engineerhammad.com>.
++ Files Benchmark
+<br>Evaluates the read/write performance of the device using a fixed 4kb buffer, reading/writing 16 files of 64mb each.
+
+## Comparison with AnTuTu
+
+| Features        | AndroidBenchmark  | Antutu |
+| :-------------: |:-----------------:| :-----:|
+| UX   | No | Yes |
+| CPU  | Yes | Yes |
+| RAM | No |  Yes |
+| Storage IO | Yes | Yes |
+| GPU | No | Yes |
+| Network | Yes | No |
+
+
 ## Activities
 
 + *BaseActivity* is the superclass that all other activities extend.
@@ -22,18 +49,3 @@ When first logging into the application, the device will be assigned an unique i
 Using these SnapShots, the application retrieves the scores of an user for a particular benchmark, all its scores, or all the scores of all the users on a particular benchmark. 
 
 Data is posted in two locations in the Firebase Database, one is the path which is only accessible by the user, and the other one where all users post their scores for a particular benchmark.
-
-## About the benchmarks
-
-+ CPU Benchmark
-This benchmark evaluates the performance of the CPU. It consists of 3 smaller benchmarks:
-<br>*Integer arithmetic*: Stresses the ALU by doing lots of integer computations.
-<br>*Floating point*: Stresses the FPU by doing lots of floating point computations.
-<br>*Digits of PI*: Puts caching and multithreading to the test by computing digits of PI, using the
-[Bailey–Borwein–Plouffe formula](https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula) in a parallel manner.
-+ Hashing Benchmark
-<br>This benchmark computes hashes using the BCrypt Algorithm. [The implementation](http://www.mindrot.org/projects/jBCrypt/) of the BCrypt class was provided by Damien Miller.
-+ Network Benchmark
-<br>Measures download speed by downloading part of a large file from <http://www.engineerhammad.com>.
-+ Files Benchmark
-<br>Evaluates the read/write performance of the device using a fixed 4kb buffer, writing 16 files of 64mb each.
