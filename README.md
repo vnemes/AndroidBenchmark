@@ -34,10 +34,10 @@ Data is posted in two locations in the Firebase Database, one is the path which 
 
 Since the Android Operating System is so widely used, obviously there exist other Benchmark Applicatins which assess the performance of the device. Two of the most popular ones are:
 
-+ *AnTuTu Benchmark* - A full suite of benchmarks which evaluate the CPU, RAM, GPU and the IO of a device. <br>
++ [*AnTuTu Benchmark*](https://play.google.com/store/apps/details?id=com.antutu.ABenchMark&hl=en) - A full suite of benchmarks which evaluate the CPU, RAM, GPU and the IO of a device. <br>
 The most interesting of its features is the *UX* metric, which assesses the *User experience* through multithreaded tasks and runtime application evaluation (on Dalvik or ART)
 
-+ *3DMARK* - One of the most popular Video benchmarks on PC is also availible on Android. This benchmark evaluates the performance of device in respect to 3D graphic rendering and CPU workload processing capabilities. 
++ [*3DMARK*](https://play.google.com/store/apps/details?id=com.futuremark.dmandroid.application&hl=en) - One of the most popular Video benchmarks on PC is also availible on Android. This benchmark evaluates the performance of device in respect to 3D graphic rendering and CPU workload processing capabilities. 
 <br>At the moment of this writing, 3DMark consists of 4 tests on Android, 2 for Flagship devices and 2 for older devices comparison. Each tests assesses the performance of the device by rendering a multiple scenes with shaders, particle effects, post processing and other GPU & CPU intensive effects added.
 
 Both of these benchmarks have been tested on over 3000 devices and have over 100000 values in their datasets.
