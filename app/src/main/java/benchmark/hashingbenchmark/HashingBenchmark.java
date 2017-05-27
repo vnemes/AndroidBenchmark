@@ -52,7 +52,7 @@ public class HashingBenchmark implements IBenchmark {
     @Override
     public void warmup() {
         Long prevSize = this.size;
-        initialize(10L);
+        initialize(5000L);
         compute();
         this.size = prevSize;
     }
