@@ -117,14 +117,15 @@ public class Database {
         database.getReference().child("benchmarks").child(benchmarkName).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                int entries = 0;
                 for (DataSnapshot data : dataSnapshot.getChildren()) {
+                    entries++;
                     Score tempScore = data.getValue(Score.class);
-                    if (results.get(tempScore.getDevice()) == null) {
-                        results.put(tempScore.getDevice(), tempScore.getResult());
-                    }
-                    if (results.get(tempScore.getDevice()).compareTo(tempScore.getResult()) < 0)
+                    if (results.get(tempScore.getDevice()) == null || Long.parseLong(results.get(tempScore.getDevice())) < Long.parseLong(tempScore.getResult()))
                         results.put(tempScore.getDevice(), tempScore.getResult());
                 }
+
+                Log.d(TAG, "total entries: "+entries);
                 ScoreActivity.updateRanking(results, rankContext);
                 Log.d(TAG, "Rankings read from DB");
             }
