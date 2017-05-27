@@ -86,7 +86,7 @@ public class IntegerMathCPUBenchmark implements IBenchmark {
         return new Score(
                 "IntegerBenchmark",
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
-                "Done 60 million integer arithmetic operations in "+myTimeUnit.convertTime(this.result, myTimeUnit.Second)+" seconds"
+                "Done 60 million integer arithmetic ops in "+myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)+" ms,"
         );
     }
 
