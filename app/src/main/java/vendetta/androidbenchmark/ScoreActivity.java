@@ -98,4 +98,9 @@ public class ScoreActivity extends BaseActivity {
         }
         progressBar.setVisibility(View.GONE);
     }
+
+    @Override
+    public void onBackPressed(){
+        finish();
+    }
 }

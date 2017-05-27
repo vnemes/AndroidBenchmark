@@ -110,7 +110,7 @@ public class BaseActivity extends AppCompatActivity
 
         if (id == R.id.action_about) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("AndroidBenchmark v0.3-beta\n-All benchmarks working\n-Database services online\nGithub Link:\nhttps://github.com/vendettavn/AndroidBenchmark")
+            builder.setMessage("AndroidBenchmark Release (v1.1)\n-All benchmarks working\n-Database services online\nGithub Link:\nhttps://github.com/vendettavn/AndroidBenchmark")
                     .setCancelable(false)
                     .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
