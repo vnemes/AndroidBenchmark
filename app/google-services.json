@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "813986397577",
+    "firebase_url": "https://androidbenchmark-e51e5.firebaseio.com",
+    "project_id": "androidbenchmark-e51e5",
+    "storage_bucket": "androidbenchmark-e51e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813986397577:android:0686f0e36f17ec1b",
+        "android_client_info": {
+          "package_name": "vendetta.androidbenchmark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813986397577-63p2srbuke71pek4ms8ami1re0a7ssbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vendetta.androidbenchmark",
+            "certificate_hash": "22993524f40c09950ba143b401026cc821451e76"
+          }
+        },
+        {
+          "client_id": "813986397577-bth9cmmjda0ih8kco0qgn9tfidev12ug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxtzcx1kHmImZJnL8_4HYKsWIEbmg7mVk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813986397577-bth9cmmjda0ih8kco0qgn9tfidev12ug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

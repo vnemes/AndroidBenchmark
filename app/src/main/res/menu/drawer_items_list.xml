@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:title="Benchmarks">
+        <item
+            android:id="@+id/nav_cpubench"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="CPU Benchmark" />
+        <item
+            android:id="@+id/nav_hashbench"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Hashing Benchmark" />
+        <item
+            android:id="@+id/nav_filebench"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="File Access Benchmark" />
+        <item
+            android:id="@+id/nav_netbench"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Network Benchmark" />
+    </group>
+
+    <item android:title="Leaderboards">
+        <menu>
+            <item
+                android:id="@+id/nav_rankings"
+                android:icon="@drawable/ic_menu_share"
+                android:title="View your results" />
+            <item
+                android:id="@+id/nav_benchmark"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Run Full Benchmark Suite" />
+        </menu>
+    </item>
+
+</menu>
