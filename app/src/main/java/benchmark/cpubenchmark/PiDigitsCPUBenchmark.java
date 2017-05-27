@@ -163,7 +163,7 @@ public class PiDigitsCPUBenchmark implements IBenchmark {
         return new Score(
                 "PIBenchmark",
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
-                "Computed "+ scale+" digits of PI in "+ Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.Second))+" seconds");
+                " "+ scale+" digits of PI in "+ Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond))+" ms.");
     }
 
 }

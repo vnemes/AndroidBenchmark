@@ -93,12 +93,12 @@ public class BenchmarkSuite implements IBenchmark {
                 result *= Double.parseDouble(current.getResult());
                 cnt++;
             }
-            sb.append('\n'+current.getBenchName()+": "+current.getResult());
+            sb.append(current.getExtra()+'\n');
         }
         result = Math.pow(result, 1.0 / cnt);
         return new Score(Benchmarks.BenchmarkSuite.toString(),
                 Long.toString((long)result),
-                "Thank you for running our application!\n"+sb.toString());
+                sb.toString());
     }
 
     @Override

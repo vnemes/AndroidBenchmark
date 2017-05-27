@@ -119,7 +119,7 @@ public class NetworkBenchmark implements IBenchmark {
         return new Score(
                 Benchmarks.NetworkBenchmark.toString(),
                 Long.toString((long)(this.result * 1000)),
-                "Downloaded "+size/(1024*1024)+" MegaBytes with a speed of "+String.format(java.util.Locale.US,"%.3f",result)+" MB/s");
+                "Downloaded "+size/(1024*1024)+" MB with a speed of "+String.format(java.util.Locale.US,"%.2f",result)+" MB/s");
     }
 
     @Override

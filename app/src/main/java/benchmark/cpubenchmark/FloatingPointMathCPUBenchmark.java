@@ -12,7 +12,6 @@ import stopwatch.Timer;
 public class FloatingPointMathCPUBenchmark implements IBenchmark {
     private Long size = Long.MAX_VALUE;
     private volatile boolean shouldTestRun;
-    private String extra;
     private long result;
 
     @Override
@@ -88,7 +87,7 @@ public class FloatingPointMathCPUBenchmark implements IBenchmark {
         return new Score(
                 "FloatingPointBenchmark",
                 Long.valueOf(myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)).toString(),
-                "Done 60 million floating point arithmetic operations in "+myTimeUnit.convertTime(this.result, myTimeUnit.Second)+" seconds"
+                "60 million floating point arithmetic ops in "+myTimeUnit.convertTime(this.result, myTimeUnit.MilliSecond)+" ms,"
         );
     }
 

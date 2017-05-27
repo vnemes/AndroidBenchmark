@@ -98,7 +98,7 @@ public class FilesBenchmark implements IBenchmark {
         return new Score(
                 Benchmarks.FilesBenchmark.toString(),
                 Long.toString((long)(res*100)),
-                "Read speed: "+String.format(java.util.Locale.US, "%.3f",resRead)+" MB/s\nWrite Speed: "+String.format(java.util.Locale.US, "%.3f",resWrite)+"MB/s");
+                "Read speed: "+String.format(java.util.Locale.US, "%.2f",resRead)+" MB/s, Write Speed: "+String.format(java.util.Locale.US, "%.2f",resWrite)+"MB/s");
     }
 
     @Override
