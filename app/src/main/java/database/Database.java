@@ -10,6 +10,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
@@ -59,6 +60,7 @@ public class Database {
                     if (database == null) {
                         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
                         database = FirebaseDatabase.getInstance();
+                        database.getReference().child("benchmarks").keepSynced(true);
                     }
                     updateUserScores();
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + uid);
