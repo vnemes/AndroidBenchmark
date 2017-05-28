@@ -54,7 +54,7 @@ public class MainActivity extends BaseActivity {
             ScoreValTView.setLayoutParams(tParams);
             ScoreValTView.setGravity(Gravity.RIGHT);
             ScoreValTView.setText(entry.getValue());
-            ScoreValTView.setOnClickListener(new View.OnClickListener() {
+            currentLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent benchActivityIntent = new Intent(v.getContext(), BenchmarkActivity.class);

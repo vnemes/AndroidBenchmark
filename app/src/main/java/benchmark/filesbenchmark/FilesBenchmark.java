@@ -92,7 +92,7 @@ public class FilesBenchmark implements IBenchmark {
 
     @Override
     public Score getScore() {
-        double resRead = FILE_SIZE / (1024 * 1024.0) /(this.readResult / 1000000000.0);
+        double resRead = this.readResult == 0 ? 1.01 : FILE_SIZE / (1024 * 1024.0) /(this.readResult / 1000000000.0);
         double resWrite = FILE_SIZE / (1024 * 1024.0) /(this.writeResult / 1000000000.0);
         double res = sqrt(resRead*resWrite);
         return new Score(

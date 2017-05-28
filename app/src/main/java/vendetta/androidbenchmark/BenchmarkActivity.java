@@ -9,9 +9,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +36,8 @@ public class BenchmarkActivity extends BaseActivity {
     private String benchName;
     private TextView benchNameTV;
     private AsyncTask benchAsyncTask;
+    private Button startBenchmark;
+    private Button viewResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,8 @@ public class BenchmarkActivity extends BaseActivity {
         setContentView(R.layout.content_benchmark);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         benchDescriptionTV = (TextView) findViewById(R.id.benchDescriptionTV);
+        startBenchmark = (Button) findViewById(R.id.cpubenchstart);
+        viewResults = (Button) findViewById(R.id.viewscores);
         benchNameTV = (TextView) findViewById(R.id.benchNameTV);
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
         progressBar.setVisibility(View.GONE);
@@ -71,6 +78,12 @@ public class BenchmarkActivity extends BaseActivity {
     public void startBenchmark(View view) {
         final TextView benchDescriptionFinalTV = (TextView) findViewById(R.id.benchDescriptionTV);
         progressBar.setVisibility(View.VISIBLE);
+        viewResults.setClickable(false);
+        startBenchmark.setClickable(false);
+
+        final DrawerLayout drawerToggle = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        drawerToggle.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         benchDescriptionFinalTV.append("\nRunning!");
         Toast.makeText(this,benchName+" started",Toast.LENGTH_LONG).show();
 
@@ -85,8 +98,12 @@ public class BenchmarkActivity extends BaseActivity {
                 benchDescriptionFinalTV.setText("Uploading your results to the cloud.\nPlease wait...");
                 Database.postBenchScore(score);
                 progressBar.setVisibility(View.GONE);
+                viewResults.setClickable(true);
+                startBenchmark.setClickable(true);
+                drawerToggle.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
                 Intent scoreActivityIntent = new Intent(getApplicationContext(), ScoreActivity.class);
                 scoreActivityIntent.putExtra(BENCH_NAME, benchName);
+                scoreActivityIntent.putExtra(BENCH_RUN, true);
                 startActivity(scoreActivityIntent);
                 finish();
             }
@@ -115,5 +132,13 @@ public class BenchmarkActivity extends BaseActivity {
                 });
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    public void viewScores(View view){
+        Intent scoreActivityIntent = new Intent(getApplicationContext(), ScoreActivity.class);
+        scoreActivityIntent.putExtra(BENCH_NAME, benchName);
+        scoreActivityIntent.putExtra(BENCH_RUN, false);
+        startActivity(scoreActivityIntent);
+        finish();
     }
 }

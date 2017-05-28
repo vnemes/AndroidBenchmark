@@ -30,12 +30,14 @@ public class ScoreActivity extends BaseActivity {
     private static TextView extraTV;
     private static LinearLayout rankingsContainer;
     private static ProgressBar progressBar;
+    private static boolean wasBenchRun;
     private String benchName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_score);
+        TextView result = (TextView) findViewById(R.id.textView);
         scoreTv = (TextView) findViewById(R.id.scoreTV);
         extraTV = (TextView) findViewById(R.id.extraTV);
         rankingsContainer = (LinearLayout) findViewById(R.id.resultScrollContainerLayout);
@@ -43,7 +45,13 @@ public class ScoreActivity extends BaseActivity {
         progressBar.setVisibility(View.VISIBLE);
         Intent intent = getIntent();
         benchName = intent.getStringExtra(BENCH_NAME);
-        Database.getBenchScore(benchName);
+        wasBenchRun = intent.getBooleanExtra(BENCH_RUN, false);
+        if (wasBenchRun) Database.getBenchScore(benchName);
+        else {
+            scoreTv.setText(benchName);
+            extraTV.setText("Here are the scores other users have gotten for this Benchmark:");
+            result.setText("Rankings for");
+        }
         Database.getRankings(benchName, this);
     }
 
@@ -55,7 +63,8 @@ public class ScoreActivity extends BaseActivity {
     public static void updateRanking(HashMap<String, String> scores, Context context) {
         boolean isDifferent = false;
         rankingsContainer.removeAllViewsInLayout();
-        scores.put("Your device: " + DeviceInfo.getFullDeviceName(), scoreTv.getText().toString());
+        if (wasBenchRun)
+            scores.put("Your device: " + DeviceInfo.getFullDeviceName(), scoreTv.getText().toString());
         SortedSet<Map.Entry<String, String>> resultSet = new TreeSet<>(
                 new Comparator<Map.Entry<String, String>>() {
                     @Override
@@ -73,7 +82,7 @@ public class ScoreActivity extends BaseActivity {
             else currentLayout.setBackgroundColor(Color.parseColor("#a9b4f2"));
             if (entry.getKey().startsWith("Your device"))
                 currentLayout.setBackgroundColor(Color.parseColor("#ff93a9"));
-            currentLayout.setPadding(5,5,5,0);
+            currentLayout.setPadding(5, 5, 5, 0);
             isDifferent = !isDifferent;
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             currentLayout.setLayoutParams(lp);
@@ -100,7 +109,7 @@ public class ScoreActivity extends BaseActivity {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         finish();
     }
 }

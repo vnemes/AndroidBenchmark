@@ -30,7 +30,8 @@ public class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String BENCH_NAME = "benchName";
-    private FrameLayout view_stub; //This is the framelayout to keep your content view
+    public static final String BENCH_RUN = "benchRun";
+    FrameLayout view_stub; //This is the framelayout to keep your content view
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,7 +147,6 @@ public class BaseActivity extends AppCompatActivity
         } else if (id == R.id.nav_benchmark) {
             benchActivityIntent.putExtra(BENCH_NAME, Benchmarks.BenchmarkSuite.toString());
         }
-
         startActivity(benchActivityIntent);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

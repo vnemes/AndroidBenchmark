@@ -12,7 +12,6 @@ import java.util.concurrent.Future;
 import benchmark.Benchmarks;
 import benchmark.IBenchmark;
 import database.Score;
-import log.ConsoleLogger;
 import log.myTimeUnit;
 import stopwatch.Timer;
 
@@ -26,10 +25,8 @@ import stopwatch.Timer;
 public class HashingBenchmark implements IBenchmark {
     private static final int THREAD_POOL_SIZE = 4;
     private static final long RND_SEED = 25214903917L; // Used for shuffling.
-    private ConsoleLogger logger = new ConsoleLogger();
 
     private long result; // measured time
-    private String extra;
     private final List<Character> alphabet = new ArrayList<>();
     private long size = 9001L; // How many passwords to be hashed.
     private volatile boolean shouldTestRun;
